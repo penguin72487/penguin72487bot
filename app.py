@@ -49,28 +49,28 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    if '最新合作廠商' in msg:
-        message = imagemap_message()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '哈哈' or '笑死' or 'xd' or 'Xd' or 'XD' or 'xD' in msg:
-        s_List=['哈哈','笑死','呵呵']
+    #if '最新合作廠商' in msg:
+     #   message = imagemap_message()
+     #   line_bot_api.reply_message(event.reply_token, message)
+    if '哈哈' or '笑死' or 'xd' or 'Xd' or 'XD' or 'xD' in msg:
+        s_List=['哈哈','笑死','呵呵',msg]
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
-    elif '註冊會員' in msg:
-        message = Confirm_Template()
+    #elif '註冊會員' in msg:
+     #   message = Confirm_Template()
+     #   line_bot_api.reply_message(event.reply_token, message)
+    #elif '旋轉木馬' in msg:
+     #   message = Carousel_Template()
+     #   line_bot_api.reply_message(event.reply_token, message)
+    #elif '圖片畫廊' in msg:
+    #    message = test()
+    #    line_bot_api.reply_message(event.reply_token, message)
+    #elif '功能列表' in msg:
+    #    message = function_list()
+    #    line_bot_api.reply_message(event.reply_token, message)
+    else:
+        message = TextSendMessage(text='抱歉不支援喔')
         line_bot_api.reply_message(event.reply_token, message)
-    elif '旋轉木馬' in msg:
-        message = Carousel_Template()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '圖片畫廊' in msg:
-        message = test()
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '功能列表' in msg:
-        message = function_list()
-        line_bot_api.reply_message(event.reply_token, message)
-   # else:
-      #  message = TextSendMessage(text=msg)
-      #  line_bot_api.reply_message(event.reply_token, message)
 
 import os
 if __name__ == "__main__":
