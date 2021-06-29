@@ -28,7 +28,7 @@ static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 line_bot_api = LineBotApi('XKPBjOTDI9dxcSO5On2+bds/rPqX0W3j5atzg1E7S/1pfzoCly8rT1c8pfs3EPIRnK5duxqzV8+JnBwf2fXPBtj76+xXnYpVc+F8O+qYH9Hx62iSQ1kMdyGBiiu3ebbUsHCDWVJlqUAHyXyHmUCzXQdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
 handler = WebhookHandler('8442ec7ac073dddd983212061210a09b')
-flag = 1
+#flag = 1
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -50,75 +50,75 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     
-    if flag ==1 :
-        #if '最新合作廠商' in msg:
-        #   message = imagemap_message()
-        #   line_bot_api.reply_message(event.reply_token, message)
-        if '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
-            s_List=['哈哈','笑死','呵呵',msg]
-            message = TextSendMessage(text=random.choice(s_List))
+#   if flag ==1 :
+    #if '最新合作廠商' in msg:
+    #   message = imagemap_message()
+    #   line_bot_api.reply_message(event.reply_token, message)
+    if '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
+        s_List=['哈哈','笑死','呵呵',msg]
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
+        s_List=['是的類排一','是的肋排一','再說笑話阿']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '好喝' in msg :
+        message = TextSendMessage(text='好喝')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '學霸' in msg or '貓咪' in msg:
+        s_List=['貓咪','學霸','肋排一','學爸爸',msg]
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '玩' in msg :
+        message = TextSendMessage(text='企鵝遊戲可以玩了')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '彩蛋' in msg  :
+        s_List=['企鵝還有彩蛋喔','是的肋排一','再說笑話阿']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '怎麼走路' in msg :
+        message = TextSendMessage(text='像企鵝一樣蹲著走')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '企鵝遊戲' in msg :
+        message = TextSendMessage(text='企鵝遊戲可以玩了喔~')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '探究' in msg :
+        message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近我寫的規則')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '讀書' in msg :
+        s_List=['我都不讀的','我都沒讀','我就梅毒']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '讀書' in msg :
+        s_List=['我都不讀的','我都沒讀','我就梅毒']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '機器人狀態' in msg:
+        if flag==1:
+            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
             line_bot_api.reply_message(event.reply_token, message)
-        elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
-            s_List=['是的類排一','是的肋排一','再說笑話阿']
-            message = TextSendMessage(text=random.choice(s_List))
+        else :
+            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
             line_bot_api.reply_message(event.reply_token, message)
-        elif '好喝' in msg :
-            message = TextSendMessage(text='好喝')
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '學霸' in msg or '貓咪' in msg:
-            s_List=['貓咪','學霸','肋排一','學爸爸',msg]
-            message = TextSendMessage(text=random.choice(s_List))
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '玩' in msg :
-            message = TextSendMessage(text='企鵝遊戲可以玩了')
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '彩蛋' in msg  :
-            s_List=['企鵝還有彩蛋喔','是的肋排一','再說笑話阿']
-            message = TextSendMessage(text=random.choice(s_List))
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '怎麼走路' in msg :
-            message = TextSendMessage(text='像企鵝一樣蹲著走')
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '企鵝遊戲' in msg :
-            message = TextSendMessage(text='企鵝遊戲可以玩了喔~')
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '探究' in msg :
-            message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近我寫的規則')
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '讀書' in msg :
-            s_List=['我都不讀的','我都沒讀','我就梅毒']
-            message = TextSendMessage(text=random.choice(s_List))
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '讀書' in msg :
-            s_List=['我都不讀的','我都沒讀','我就梅毒']
-            message = TextSendMessage(text=random.choice(s_List))
-            line_bot_api.reply_message(event.reply_token, message)
-        elif '機器人狀態' in msg:
-            if flag==1:
-                message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
-                line_bot_api.reply_message(event.reply_token, message)
-            else :
-                message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
-                line_bot_api.reply_message(event.reply_token, message)
-        elif '關閉機器人' in msg:
-            flag = 0
-            message = TextSendMessage(text='flag=' + flag+'關閉好了' )
-            line_bot_api.reply_message(event.reply_token, message)
+    elif '關閉機器人' in msg:
+        flag = 0
+        message = TextSendMessage(text='flag=' + flag+'關閉好了' )
+        line_bot_api.reply_message(event.reply_token, message)
 
 
 
-    else :
-        if '開啟機器人' in msg:
-            flag = 1
-            message = TextSendMessage(text='flag=' + flag+'開啟好了' )
+#   else :
+    if '開啟機器人' in msg:
+        flag = 1
+        message = TextSendMessage(text='flag=' + flag+'開啟好了' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '機器人狀態' in msg:
+        if flag==0:
+            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
             line_bot_api.reply_message(event.reply_token, message)
-        elif '機器人狀態' in msg:
-            if flag==0:
-                message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
-                line_bot_api.reply_message(event.reply_token, message)
-            else :
-                message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
-                line_bot_api.reply_message(event.reply_token, message)
+        else :
+            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
+            line_bot_api.reply_message(event.reply_token, message)
 
 
 
