@@ -7,6 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
+import random
 
 
 #======這裡是呼叫的檔案內容=====
@@ -51,8 +52,9 @@ def handle_message(event):
     if '最新合作廠商' in msg:
         message = imagemap_message()
         line_bot_api.reply_message(event.reply_token, message)
-    elif '笑死' in msg:
-        message = TextSendMessage(text='哈哈')
+    elif '笑死'or'xd'or'Xd'or'XD'or'xD' in msg:
+        s_List=['哈哈','笑死','呵呵']
+        message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
     elif '註冊會員' in msg:
         message = Confirm_Template()
