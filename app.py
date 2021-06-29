@@ -52,7 +52,7 @@ def handle_message(event):
     #if '最新合作廠商' in msg:
     #   message = imagemap_message()
     #   line_bot_api.reply_message(event.reply_token, message)
-    if ('哈哈' or '笑死' or 'xd' or 'Xd' or 'XD' or 'xD') in msg:
+    if '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
         s_List=['哈哈','笑死','呵呵',msg]
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
