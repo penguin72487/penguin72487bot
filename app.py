@@ -49,28 +49,67 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    #if '最新合作廠商' in msg:
-    #   message = imagemap_message()
-    #   line_bot_api.reply_message(event.reply_token, message)
-    if '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
-        s_List=['哈哈','笑死','呵呵',msg]
-        message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
-    #elif '註冊會員' in msg:
-    #   message = Confirm_Template()
-    #   line_bot_api.reply_message(event.reply_token, message)
-    #elif '旋轉木馬' in msg:
-    #   message = Carousel_Template()
-    #   line_bot_api.reply_message(event.reply_token, message)
-    #elif '圖片畫廊' in msg:
-    #    message = test()
-    #    line_bot_api.reply_message(event.reply_token, message)
-    #elif '功能列表' in msg:
-    #    message = function_list()
-    #    line_bot_api.reply_message(event.reply_token, message)
-    else:
-        message = TextSendMessage(text='抱歉不支援喔')
-        line_bot_api.reply_message(event.reply_token, message)
+    flag = 1
+    if flag ==1 :
+        #if '最新合作廠商' in msg:
+        #   message = imagemap_message()
+        #   line_bot_api.reply_message(event.reply_token, message)
+        if '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
+            s_List=['哈哈','笑死','呵呵',msg]
+            message = TextSendMessage(text=random.choice(s_List))
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
+            s_List=['是的類排一','是的肋排一','再說笑話阿']
+            message = TextSendMessage(text=random.choice(s_List))
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '好喝' in msg :
+            message = TextSendMessage(text='好喝')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '學霸' in msg or '貓咪' in msg:
+            s_List=['貓咪','學霸','肋排一','學爸爸',msg]
+            message = TextSendMessage(text=random.choice(s_List))
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '玩' in msg :
+            message = TextSendMessage(text='企鵝遊戲可以玩了')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '彩蛋' in msg  :
+            s_List=['企鵝還有彩蛋喔','是的肋排一','再說笑話阿']
+            message = TextSendMessage(text=random.choice(s_List))
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '怎麼走路' in msg :
+            message = TextSendMessage(text='像企鵝一樣蹲著走')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '企鵝遊戲' in msg :
+            message = TextSendMessage(text='企鵝遊戲可以玩了喔~')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '探究' in msg :
+            message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近我寫的規則')
+            line_bot_api.reply_message(event.reply_token, message)
+        elif '讀書' in msg :
+            s_List=['我都不讀的','我都沒讀','我就梅毒']
+            message = TextSendMessage(text=random.choice(s_List))
+            line_bot_api.reply_message(event.reply_token, message)
+            
+
+
+
+
+
+        #elif '註冊會員' in msg:
+        #   message = Confirm_Template()
+        #   line_bot_api.reply_message(event.reply_token, message)
+        #elif '旋轉木馬' in msg:
+        #   message = Carousel_Template()
+        #   line_bot_api.reply_message(event.reply_token, message)
+        #elif '圖片畫廊' in msg:
+        #    message = test()
+        #    line_bot_api.reply_message(event.reply_token, message)
+        #elif '功能列表' in msg:
+        #    message = function_list()
+        #    line_bot_api.reply_message(event.reply_token, message)
+        #else:
+        #    message = TextSendMessage(text='抱歉不支援喔')
+        #    line_bot_api.reply_message(event.reply_token, message)
 
 import os
 if __name__ == "__main__":
