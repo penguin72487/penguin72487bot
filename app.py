@@ -94,12 +94,10 @@ def handle_message(event):
             message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
             line_bot_api.reply_message(event.reply_token, message)
         else :
-            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
+             # flag = 0endMessage(text='flag=' + flag+'現在狀態是關閉的' )
             line_bot_api.reply_message(event.reply_token, message)
-    elif '關閉機器人' in msg:
-       # flag = 0
-        message = TextSendMessage(text='flag=' + flag+'關閉好了' )
-        line_bot_api.reply_message(event.reply_token, message)
+            message = TextSendMessage(text='flag=' + flag+'關閉好了' )
+            line_bot_api.reply_message(event.reply_token, message)
 
 
 
