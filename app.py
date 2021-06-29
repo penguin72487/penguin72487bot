@@ -28,7 +28,7 @@ static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 line_bot_api = LineBotApi('XKPBjOTDI9dxcSO5On2+bds/rPqX0W3j5atzg1E7S/1pfzoCly8rT1c8pfs3EPIRnK5duxqzV8+JnBwf2fXPBtj76+xXnYpVc+F8O+qYH9Hx62iSQ1kMdyGBiiu3ebbUsHCDWVJlqUAHyXyHmUCzXQdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
 handler = WebhookHandler('8442ec7ac073dddd983212061210a09b')
-#flag = 1
+flag = 1
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -84,10 +84,6 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message)
     elif '探究' in msg :
         message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近我寫的規則')
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '讀書' in msg :
-        s_List=['我都不讀的','我都沒讀','我就梅毒']
-        message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
     elif '讀書' in msg :
         s_List=['我都不讀的','我都沒讀','我就梅毒']
