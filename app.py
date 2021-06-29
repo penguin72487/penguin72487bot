@@ -73,7 +73,7 @@ def handle_message(event):
         message = TextSendMessage(text='企鵝遊戲可以玩了')
         line_bot_api.reply_message(event.reply_token, message)
     elif '彩蛋' in msg  :
-        s_List=['企鵝還有彩蛋喔','是的肋排一','再說笑話阿']
+        s_List=['企鵝還有彩蛋喔','自己去找找彩蛋喔']
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
     elif '怎麼走路' in msg :
@@ -101,24 +101,24 @@ def handle_message(event):
             message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
             line_bot_api.reply_message(event.reply_token, message)
     elif '關閉機器人' in msg:
-        flag = 0
+       # flag = 0
         message = TextSendMessage(text='flag=' + flag+'關閉好了' )
         line_bot_api.reply_message(event.reply_token, message)
 
 
 
 #   else :
-    if '開啟機器人' in msg:
-        flag = 1
-        message = TextSendMessage(text='flag=' + flag+'開啟好了' )
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '機器人狀態' in msg:
-        if flag==0:
-            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
-            line_bot_api.reply_message(event.reply_token, message)
-        else :
-            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
-            line_bot_api.reply_message(event.reply_token, message)
+#    if '開啟機器人' in msg:
+#        flag = 1
+#        message = TextSendMessage(text='flag=' + flag+'開啟好了' )
+#        line_bot_api.reply_message(event.reply_token, message)
+#    elif '機器人狀態' in msg:
+#        if flag==0:
+#            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
+#            line_bot_api.reply_message(event.reply_token, message)
+#        else :
+#            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
+#          line_bot_api.reply_message(event.reply_token, message)
 
 
 
