@@ -50,18 +50,18 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     #if '最新合作廠商' in msg:
-     #   message = imagemap_message()
-     #   line_bot_api.reply_message(event.reply_token, message)
-    if '哈哈' or '笑死' or 'xd' or 'Xd' or 'XD' or 'xD' in msg:
+    #   message = imagemap_message()
+    #   line_bot_api.reply_message(event.reply_token, message)
+    if ('哈哈' or '笑死' or 'xd' or 'Xd' or 'XD' or 'xD') in msg:
         s_List=['哈哈','笑死','呵呵',msg]
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
     #elif '註冊會員' in msg:
-     #   message = Confirm_Template()
-     #   line_bot_api.reply_message(event.reply_token, message)
+    #   message = Confirm_Template()
+    #   line_bot_api.reply_message(event.reply_token, message)
     #elif '旋轉木馬' in msg:
-     #   message = Carousel_Template()
-     #   line_bot_api.reply_message(event.reply_token, message)
+    #   message = Carousel_Template()
+    #   line_bot_api.reply_message(event.reply_token, message)
     #elif '圖片畫廊' in msg:
     #    message = test()
     #    line_bot_api.reply_message(event.reply_token, message)
