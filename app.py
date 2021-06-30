@@ -48,10 +48,10 @@ def callback():
 
 
 # 處理訊息
-@handler.add(MessageEvent, message=TextMessage, flag = 1)
+@handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-
+    flag = 1
     if flag ==1 :
         #if '最新合作廠商' in msg:
         #   message = imagemap_message()
