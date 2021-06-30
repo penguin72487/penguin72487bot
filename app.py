@@ -54,7 +54,7 @@ def handle_message(event):
     #if '最新合作廠商' in msg:
     #   message = imagemap_message()
     #   line_bot_api.reply_message(event.reply_token, message)
-    if '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
+    if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
         s_List=['哈哈','笑死','呵呵',msg]
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
@@ -135,6 +135,15 @@ def handle_message(event):
     elif '義大利麵' in msg :
         message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
         line_bot_api.reply_message(event.reply_token, message) 
+    elif '佳句' in msg or '名言' in msg :
+        s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸','干，你馬子喔---陳占棟','有交無類，有交錢就不分類---陳永宸','陳永宸:\n只要有格子都是稿紙。\n2021/4/1','陳永宸：\n婆蘿們教....\n2021/4/15']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif 'flag' in msg :
+        s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸','Flag:\n31018陳肋排一如果北模58、59、60的話，就要請全班喝紅茶屋']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+
     elif '好油'in msg or '好香'in msg or '舔'in msg or 'peko'in msg :
         s_List=['要不要peko茶','我要配cola','好油喔peko']
         message = TextSendMessage(text=random.choice(s_List))
@@ -145,7 +154,7 @@ def handle_message(event):
     elif '白嫖仔' in msg :
         message = TextSendMessage(text='好香')
         line_bot_api.reply_message(event.reply_token, message)
-    elif '怠惰' in msg or '懶' in msg :
+    elif '怠惰' in msg or '懶' in msg or '算了' in msg :
         s_List=['怠惰怠惰怠惰','你還真是怠惰呢']
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
