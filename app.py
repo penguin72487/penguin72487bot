@@ -90,8 +90,47 @@ def handle_message(event):
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
     elif '機器人狀態' in msg:
-            message = TextSendMessage(text='現在狀態是開啟的' )
-            line_bot_api.reply_message(event.reply_token, message)
+        message = TextSendMessage(text='現在狀態是開啟的' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '團長' in msg :
+        message = TextSendMessage(text='團長唱歌不好聽' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '\|/' in msg:
+        message = TextSendMessage(text='\|/' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '節奏樂隊' in msg :
+        message = TextSendMessage(text='我跟流星雨遇見的方' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '渣男' in msg :
+        message = TextSendMessage(text='對不起，企鵝也當過渣男' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '五等分'  in msg :
+        message = TextSendMessage(text='我是買五月股的' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '在下求稿' in msg :
+        message = TextSendMessage(text='在地下城尋求邂逅是否搞錯了甚麼?' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '許迎萱' in msg :
+        message = TextSendMessage(text='我對她沒感覺' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '偷看' in msg :
+        message = TextSendMessage(text='企鵝在打定音的時候，都喜歡偷看美女，至於美女是誰就不多說了' )
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '宙斯' in msg or '貝爾爺爺' in msg :
+        s_List=['誇獎女生的時候，要誇獎到她害羞地說不出話為止','偷窺可是是男人的浪漫啊! 是浪浪浪浪...浪漫啊!','唯有賭上性命的人，才能稱之為英雄。\n保護同伴，拯救女人，賭上自己吧!遇到挫折也沒關係，受到打擊也無訪，盡情哭泣吧!\n失敗為成功之母。貫徹自己的願望，喊出自己的想法。\n如此一來，那才是這是世上最頂天立地的英雄。']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '空白' in msg :
+        message = TextSendMessage(text='')
+        line_bot_api.reply_message(event.reply_token, message)
+
+
+
+
+
+
+
+
         
 
 
