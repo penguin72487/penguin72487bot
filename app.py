@@ -69,9 +69,9 @@ def handle_message(event):
         s_List=['貓咪','學霸','肋排一','學爸爸',msg]
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
-    elif '玩' in msg :
-        message = TextSendMessage(text='企鵝遊戲可以玩了')
-        line_bot_api.reply_message(event.reply_token, message)
+    #elif '玩' in msg :
+    #    message = TextSendMessage(text='企鵝遊戲可以玩了')
+    #    line_bot_api.reply_message(event.reply_token, message)
     elif '彩蛋' in msg  :
         s_List=['企鵝還有彩蛋喔','自己去找找彩蛋喔']
         message = TextSendMessage(text=random.choice(s_List))
@@ -152,6 +152,9 @@ def handle_message(event):
     elif '流星雨' in msg or '劉馨榆' in msg:
         s_List=['企鵝喜歡的','企鵝喜歡看']
         message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '機器人自我介紹' in msg :
+        message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
         line_bot_api.reply_message(event.reply_token, message)
 
 
