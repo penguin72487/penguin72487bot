@@ -145,7 +145,7 @@ def handle_message(event):
     elif '白嫖仔' in msg :
         message = TextSendMessage(text='好香')
         line_bot_api.reply_message(event.reply_token, message)
-    elif '怠惰' in msg or '懶':
+    elif '怠惰' in msg or '懶' in msg :
         s_List=['怠惰怠惰怠惰','你還真是怠惰呢']
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
