@@ -49,7 +49,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    flag = 1
+  #  flag = 1
 #   if flag ==1 :
     #if '最新合作廠商' in msg:
     #   message = imagemap_message()
@@ -90,14 +90,9 @@ def handle_message(event):
         message = TextSendMessage(text=random.choice(s_List))
         line_bot_api.reply_message(event.reply_token, message)
     elif '機器人狀態' in msg:
-        if flag==1:
-            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
+            message = TextSendMessage(text='現在狀態是開啟的' )
             line_bot_api.reply_message(event.reply_token, message)
-        else :
-             # flag = 0endMessage(text='flag=' + flag+'現在狀態是關閉的' )
-            line_bot_api.reply_message(event.reply_token, message)
-            message = TextSendMessage(text='flag=' + flag+'關閉好了' )
-            line_bot_api.reply_message(event.reply_token, message)
+        
 
 
 
