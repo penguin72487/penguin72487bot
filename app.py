@@ -132,7 +132,7 @@ def handle_message(event):
     elif '¿?' in msg :
         message = TextSendMessage(text='¿?是在69 --陳永宸')
         line_bot_api.reply_message(event.reply_token, message)
-    elif '義大利麵' :
+    elif '義大利麵' in msg :
         message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
         line_bot_api.reply_message(event.reply_token, message) 
     elif '油'in msg or '香'in msg or '舔'in msg or 'peko'in msg :
