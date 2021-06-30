@@ -72,10 +72,10 @@ def handle_message(event):
     #elif '玩' in msg :
     #    message = TextSendMessage(text='企鵝遊戲可以玩了')
     #    line_bot_api.reply_message(event.reply_token, message)
-    elif '彩蛋' in msg  :
-        s_List=['企鵝還有彩蛋喔','自己去找找彩蛋喔']
-        message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+    #elif '彩蛋' in msg  :
+     #   s_List=['企鵝還有彩蛋喔','自己去找找彩蛋喔']
+     #   message = TextSendMessage(text=random.choice(s_List))
+     #   line_bot_api.reply_message(event.reply_token, message)
     elif '怎麼走路' in msg :
         message = TextSendMessage(text='像企鵝一樣蹲著走')
         line_bot_api.reply_message(event.reply_token, message)
