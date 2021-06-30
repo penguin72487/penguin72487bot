@@ -83,7 +83,7 @@ def handle_message(event):
         message = TextSendMessage(text='企鵝遊戲可以玩了喔~')
         line_bot_api.reply_message(event.reply_token, message)
     elif '探究' in msg :
-        message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近我寫的規則')
+        message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近企鵝寫的規則')
         line_bot_api.reply_message(event.reply_token, message)
     elif '讀書' in msg :
         s_List=['我都不讀的','我都沒讀','我就梅毒']
@@ -99,19 +99,19 @@ def handle_message(event):
         message = TextSendMessage(text='\|/' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '節奏樂隊' in msg :
-        message = TextSendMessage(text='我跟流星雨遇見的方' )
+        message = TextSendMessage(text='企鵝跟流星雨遇見的方' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '渣男' in msg :
         message = TextSendMessage(text='對不起，企鵝也當過渣男' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '五等分'  in msg :
-        message = TextSendMessage(text='我是買五月股的' )
+        message = TextSendMessage(text='企鵝是買五月股的' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '在下求稿' in msg :
         message = TextSendMessage(text='在地下城尋求邂逅是否搞錯了甚麼?' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '許迎萱' in msg :
-        message = TextSendMessage(text='我對她沒感覺' )
+        message = TextSendMessage(text='我再說一次，企鵝對她沒感覺' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '偷看' in msg :
         message = TextSendMessage(text='企鵝在打定音的時候，都喜歡偷看美女，至於美女是誰就不多說了' )
@@ -123,15 +123,36 @@ def handle_message(event):
     elif '空白' in msg :
         message = TextSendMessage(text='')
         line_bot_api.reply_message(event.reply_token, message)
-
-
-
-
-
-
-
-
-        
+    elif '月色' in msg :
+        message = TextSendMessage(text='蛤甚麼?你今天月色真美')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '晚安' in msg :
+        message = TextSendMessage(text=' 晚安哦(•ө•)♡')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '¿?' in msg :
+        message = TextSendMessage(text='¿?是在69 --陳永宸')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '義大利麵' :
+        message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
+        line_bot_api.reply_message(event.reply_token, message) 
+    elif '油'in msg or '香'in msg or '舔'in msg or 'peko'in msg :
+        s_List=['要不要peko茶','我要配cola','好油喔peko']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '梗圖' in msg :
+        message = TextSendMessage(text='鯊鯊好可愛')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '白嫖仔' in msg :
+        message = TextSendMessage(text='好香')
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '怠惰' in msg or '懶':
+        s_List=['怠惰怠惰怠惰','你還真是怠惰呢']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
+    elif '流星雨' in msg or '劉馨榆' in msg:
+        s_List=['企鵝喜歡的','企鵝喜歡看']
+        message = TextSendMessage(text=random.choice(s_List))
+        line_bot_api.reply_message(event.reply_token, message)
 
 
 
