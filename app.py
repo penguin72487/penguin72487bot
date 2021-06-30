@@ -23,7 +23,7 @@ import time
 #======python的函數庫==========
 
 
-flag = 1
+
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
@@ -48,7 +48,7 @@ def callback():
 
 
 # 處理訊息
-@handler.add(MessageEvent, message=TextMessage)
+@handler.add(MessageEvent, message=TextMessage, flag = 1)
 def handle_message(event):
     msg = event.message.text
 
