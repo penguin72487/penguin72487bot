@@ -61,7 +61,7 @@ def handle_message(event):
     elif '.jpg' in msg :
         if '哼.jpg' in msg :
             message = ImageSendMessage(original_content_url = "https://imgur.com/8QZv1A6" + ".jpg",
-            preview_image_url = "https://imgur.com/8QZv1A6" +".jpg" )
+            preview_image_url = original_content_url )
         elif '渣男.jpg' in msg :
             message = ImageSendMessage(original_content_url = "https://imgur.com/fxzh9PQ" + ".jpg",
             preview_image_url = "https://imgur.com/fxzh9PQ" +".jpg" )
