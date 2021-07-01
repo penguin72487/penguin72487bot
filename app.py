@@ -65,7 +65,7 @@ def handle_message(event):
             preview_image_url = web_Rul )
         elif '渣男.jpg' in msg :
             web_Rul = "https://imgur.com/fxzh9PQ.jpg"
-            message = ImageSendMessage(original_content_url = web_Rul,
+            message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '香.jpg' in msg or '香圖.jpg' in msg :
             jpg_List = ["https://cdn.discordapp.com/attachments/743143275837259897/789460684986646548/IMG_20201218_195129.jpg",
@@ -77,10 +77,18 @@ def handle_message(event):
                         "https://i.imgur.com/UQAn4bw.jpg",
                         "https://i.kym-cdn.com/photos/images/original/001/862/458/0d7.jpg",
                         "https://cdn.discordapp.com/attachments/743143275837259897/765967898555711568/image0.png",
-                        "https://cdn.discordapp.com/attachments/743143275837259897/765967706482147378/image0.png"]
+                        "https://cdn.discordapp.com/attachments/743143275837259897/765967706482147378/image0.png",
+                        "https://drive.google.com/uc?id=" + "1PsqwNiQl_I6xCxyNvbKpAGfAeBgSlXu3",
+                        "https://drive.google.com/uc?id=" + "1rhqmFp39ay6aQUAxjlZFTY24DPOeIWuN",
+                        "https://drive.google.com/uc?id=" + "1KZo3aySsy7e8PzOtYl0CX13mNHf2gB0e",
+                        "https://drive.google.com/uc?id=" + "1ggunE0E-mmBMqqFxdIDvCJjbZvOjHKi_",
+                        "https://drive.google.com/uc?id=" + "1Ht66Svb6sXw6Z2K9j01ONjO37LTSxJLo",
+                        "https://drive.google.com/uc?id=" + "1PpFY0OeT5MY4LMHIlWlJ4jupfIy6tgvh"]
+                        #https://drive.google.com/uc?id=" + "
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
+        
 
              
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
