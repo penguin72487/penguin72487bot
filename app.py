@@ -75,7 +75,9 @@ def handle_message(event):
                         "https://cdn.discordapp.com/attachments/743143275837259897/850302174890426368/image0.jpg",
                         "https://cdn.discordapp.com/attachments/743143275837259897/789460685233848340/IMG_20201218_195102.jpg",
                         "https://i.imgur.com/UQAn4bw.jpg",
-                        "https://i.kym-cdn.com/photos/images/original/001/862/458/0d7.jpg"]
+                        "https://i.kym-cdn.com/photos/images/original/001/862/458/0d7.jpg",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/765967898555711568/image0.png",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/765967706482147378/image0.png"]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
