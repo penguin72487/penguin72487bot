@@ -170,7 +170,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='顏藝滿分'))
     elif '哼.jpg' in msg :
         message = ImageSendMessage(original_content_url = "https://imgur.com/8QZv1A6",
-        preview_image_url = original_content_url )
+        preview_image_url = "https://imgur.com/8QZv1A6" )
         line_bot_api.reply_message(event.reply_token, message)
 
 
