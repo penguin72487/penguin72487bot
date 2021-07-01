@@ -171,7 +171,8 @@ def handle_message(event):
     elif '哼.jpg' in msg :
         message = ImageSendMessage(original_content_url = "https://drive.google.com/file/d/1AiMnHNYecEivTsw78zKc5MOihu_HZjZA/view?usp=sharing")
         preview_image_url = "https://drive.google.com/file/d/1AiMnHNYecEivTsw78zKc5MOihu_HZjZA/view?usp=sharing"
-        
+        line_bot_api.reply_message(event.reply_token, message)
+
 
 
 
