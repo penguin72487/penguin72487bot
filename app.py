@@ -70,7 +70,12 @@ def handle_message(event):
         elif '香.jpg' in msg or '香圖.jpg' in msg :
             jpg_List = ["https://cdn.discordapp.com/attachments/743143275837259897/789460684986646548/IMG_20201218_195129.jpg",
                         "https://cdn.discordapp.com/attachments/743143275837259897/858409895363477533/image0.png",
-                        "https://cdn.discordapp.com/attachments/743143275837259897/859373224533688340/E5CdbIwVUAAmCsI.jpeg"]
+                        "https://cdn.discordapp.com/attachments/743143275837259897/859373224533688340/E5CdbIwVUAAmCsI.jpeg",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/857398121487269908/E2rvVXSVEAIpmrn.jpeg",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/850302174890426368/image0.jpg",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/789460685233848340/IMG_20201218_195102.jpg",
+                        "https://i.imgur.com/UQAn4bw.jpg",
+                        "https://i.kym-cdn.com/photos/images/original/001/862/458/0d7.jpg"]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
