@@ -55,9 +55,9 @@ def handle_message(event):
     #   message = imagemap_message()
     #   line_bot_api.reply_message(event.reply_token, message)
     if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
-        s_List=['哈哈','笑死','呵呵',msg]
-        message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+        s_List=['哈哈','笑死','呵呵',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
+        message = TextSendMessage(text=random.choice(s_List)),
+        line_bot_api.reply_message(event.reply_token, message),
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
         s_List=['是的類排一','是的肋排一','再說笑話阿']
         message = TextSendMessage(text=random.choice(s_List))
