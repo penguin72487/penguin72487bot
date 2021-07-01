@@ -53,134 +53,134 @@ def handle_message(event):
 #   if flag ==1 :
     #if '最新合作廠商' in msg:
     #   message = imagemap_message()
-    #   line_bot_api.reply_message(event.reply_token, message)
+    #    
     if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
         s_List=['哈哈','笑死','呵呵',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
-        message = TextSendMessage(text=random.choice(s_List)),
-        line_bot_api.reply_message(event.reply_token, message),
+        message = TextSendMessage(text=random.choice(s_List))
+         
+    elif '.jpg' in msg :
+        if '哼.jpg' in msg :
+            message = ImageSendMessage(original_content_url = "https://imgur.com/8QZv1A6" + ".jpg",
+            preview_image_url = "https://imgur.com/8QZv1A6" +".jpg" )
+             
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
         s_List=['是的類排一','是的肋排一','再說笑話阿']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '好喝' in msg :
         message = TextSendMessage(text='好喝')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '學霸' in msg or '貓咪' in msg:
         s_List=['貓咪','學霸','肋排一','學爸爸',msg]
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     #elif '玩' in msg :
     #    message = TextSendMessage(text='企鵝遊戲可以玩了')
-    #    line_bot_api.reply_message(event.reply_token, message)
+    #     
     #elif '彩蛋' in msg  :
      #   s_List=['企鵝還有彩蛋喔','自己去找找彩蛋喔']
      #   message = TextSendMessage(text=random.choice(s_List))
-     #   line_bot_api.reply_message(event.reply_token, message)
+     #    
     elif '怎麼走路' in msg :
         message = TextSendMessage(text='像企鵝一樣蹲著走')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '企鵝遊戲' in msg :
         message = TextSendMessage(text='企鵝遊戲可以玩了喔~')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '探究' in msg :
         message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近企鵝寫的規則')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '讀書' in msg :
         s_List=['我都不讀的','我都沒讀','我就梅毒']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '機器人狀態' in msg:
         message = TextSendMessage(text='現在狀態是開啟的' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '團長' in msg :
         message = TextSendMessage(text='團長唱歌不好聽' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '\|/' in msg:
         message = TextSendMessage(text='\|/' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '節奏樂隊' in msg :
         message = TextSendMessage(text='企鵝跟流星雨遇見的方' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '渣男' in msg :
         message = TextSendMessage(text='對不起，企鵝也當過渣男' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '五等分'  in msg :
         message = TextSendMessage(text='企鵝是買五月股的' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '在下求稿' in msg :
         message = TextSendMessage(text='在地下城尋求邂逅是否搞錯了甚麼?' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '許迎萱' in msg :
         message = TextSendMessage(text='我再說一次，企鵝對她沒感覺' )
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '偷看' in msg :
         message = TextSendMessage(text='企鵝在打定音的時候，都喜歡偷看美女，至於美女是誰就不多說了')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '宙斯' in msg or '貝爾爺爺' in msg :
         s_List=['誇獎女生的時候，要誇獎到她害羞地說不出話為止',
                 '偷窺可是是男人的浪漫啊! 是浪浪浪浪...浪漫啊!',
                 '唯有賭上性命的人，才能稱之為英雄。\n保護同伴，拯救女人，賭上自己吧!遇到挫折也沒關係，受到打擊也無訪，盡情哭泣吧!\n失敗為成功之母。貫徹自己的願望，喊出自己的想法。\n如此一來，那才是這是世上最頂天立地的英雄。']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '空白' in msg :
         message = TextSendMessage(text='')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '月色' in msg :
         message = TextSendMessage(text='蛤甚麼?你今天月色真美')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '晚安' in msg :
         message = TextSendMessage(text=' 晚安哦(•ө•)♡')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '¿?' in msg :
         message = TextSendMessage(text='¿?是在69 --陳永宸')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '義大利麵' in msg :
         message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
-        line_bot_api.reply_message(event.reply_token, message) 
+          
     elif '佳句' in msg or '名言' in msg :
         s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸','干，你馬子喔---陳占棟',
                 '有交無類，有交錢就不分類---陳永宸',
                 '陳永宸:\n只要有格子都是稿紙。\n2021/4/1',
                 '陳永宸：\n婆蘿們教....\n2021/4/15']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif 'flag' in msg :
         s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸',
                 'Flag:\n31018陳肋排一如果北模58、59、60的話，就要請全班喝紅茶屋']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
 
     elif '好油'in msg or '好香'in msg or '舔'in msg or 'peko'in msg :
         s_List=['要不要peko茶',
                 '我要配cola',
                 '好油喔peko']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '梗圖' in msg :
         message = TextSendMessage(text='鯊鯊好可愛')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '白嫖仔' in msg :
         message = TextSendMessage(text='好香')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '怠惰' in msg or '懶' in msg or '算了' in msg :
         s_List=['怠惰怠惰怠惰','你還真是怠惰呢']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '流星雨' in msg or '劉馨榆' in msg:
         s_List=['企鵝喜歡的','企鵝喜歡看']
         message = TextSendMessage(text=random.choice(s_List))
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '機器人自我介紹' in msg :
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
-        line_bot_api.reply_message(event.reply_token, message)
+         
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
-        line_bot_api.reply_message(event.reply_token, message)
-    elif '.jpg' in msg :
-        if '哼.jpg' in msg :
-            message = ImageSendMessage(original_content_url = "https://imgur.com/8QZv1A6" + ".jpg",
-            preview_image_url = "https://imgur.com/8QZv1A6" +".jpg" )
-            line_bot_api.reply_message(event.reply_token, message)
+    line_bot_api.reply_message(event.reply_token, message)
     
 
     
@@ -194,14 +194,14 @@ def handle_message(event):
 #    if '開啟機器人' in msg:
 #        flag = 1
 #        message = TextSendMessage(text='flag=' + flag+'開啟好了' )
-#        line_bot_api.reply_message(event.reply_token, message)
+#         
 #    elif '機器人狀態' in msg:
 #        if flag==0:
 #            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
-#            line_bot_api.reply_message(event.reply_token, message)
+#             
 #        else :
 #            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
-#          line_bot_api.reply_message(event.reply_token, message)
+#           
 
 
 
@@ -213,19 +213,19 @@ def handle_message(event):
 
         #elif '註冊會員' in msg:
         #   message = Confirm_Template()
-        #   line_bot_api.reply_message(event.reply_token, message)
+        #    
         #elif '旋轉木馬' in msg:
         #   message = Carousel_Template()
-        #   line_bot_api.reply_message(event.reply_token, message)
+        #    
         #elif '圖片畫廊' in msg:
         #    message = test()
-        #    line_bot_api.reply_message(event.reply_token, message)
+        #     
         #elif '功能列表' in msg:
         #    message = function_list()
-        #    line_bot_api.reply_message(event.reply_token, message)
+        #     
         #else:
         #    message = TextSendMessage(text='抱歉不支援喔')
-        #    line_bot_api.reply_message(event.reply_token, message)
+        #     
 
 import os
 if __name__ == "__main__":
