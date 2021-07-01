@@ -60,12 +60,20 @@ def handle_message(event):
          
     elif '.jpg' in msg :
         if '哼.jpg' in msg :
-            web_Rul = "https://imgur.com/8QZv1A6" + ".jpg"
+            web_Rul = "https://imgur.com/8QZv1A6.jpg"
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
         elif '渣男.jpg' in msg :
-            message = ImageSendMessage(original_content_url = "https://imgur.com/fxzh9PQ" + ".jpg",
-            preview_image_url = "https://imgur.com/fxzh9PQ" +".jpg" )
+            web_Rul = "https://imgur.com/fxzh9PQ.jpg"
+            message = ImageSendMessage(original_content_url = web_Rul,
+            preview_image_url = web_Rul )
+        elif '香.jpg' in msg or '香圖.jpg' in msg :
+            jpg_List = ["https://cdn.discordapp.com/attachments/743143275837259897/789460684986646548/IMG_20201218_195129.jpg",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/858409895363477533/image0.png",
+                        "https://cdn.discordapp.com/attachments/743143275837259897/859373224533688340/E5CdbIwVUAAmCsI.jpeg"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url = web_Rul,
+            preview_image_url = web_Rul )
 
              
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
