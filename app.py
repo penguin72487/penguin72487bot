@@ -175,7 +175,7 @@ def handle_message(event):
         message = TextSendMessage(text=random.choice(s_List))
          
 
-    elif '好油'in msg or '好香'in msg or '舔'in msg or 'peko'in msg :
+    elif '好油'in msg or '好香'in msg or '真香'in msg  or '舔'in msg or 'peko'in msg :
         s_List=['要不要peko茶',
                 '我要配cola',
                 '好油喔peko']
