@@ -169,8 +169,8 @@ def handle_message(event):
         #message = TextSendMessage(text='顏藝滿分')
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='顏藝滿分'))
     elif '哼.jpg' in msg :
-        message = ImageSendMessage(original_content_url = "https://drive.google.com/file/d/1AiMnHNYecEivTsw78zKc5MOihu_HZjZA/view?usp=sharing",
-        preview_image_url = "https://drive.google.com/file/d/1AiMnHNYecEivTsw78zKc5MOihu_HZjZA/view?usp=sharing")
+        message = ImageSendMessage(original_content_url = "https://imgur.com/a/hg6WNZu",
+        preview_image_url = "https://imgur.com/a/hg6WNZu")
         line_bot_api.reply_message(event.reply_token, message)
 
 
