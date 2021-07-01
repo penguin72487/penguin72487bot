@@ -114,7 +114,7 @@ def handle_message(event):
         message = TextSendMessage(text='我再說一次，企鵝對她沒感覺' )
         line_bot_api.reply_message(event.reply_token, message)
     elif '偷看' in msg :
-        message = TextSendMessage(text='企鵝在打定音的時候，都喜歡偷看美女，至於美女是誰就不多說了' )
+        message = TextSendMessage(text='企鵝在打定音的時候，都喜歡偷看美女，至於美女是誰就不多說了')
         line_bot_api.reply_message(event.reply_token, message)
     elif '宙斯' in msg or '貝爾爺爺' in msg :
         s_List=['誇獎女生的時候，要誇獎到她害羞地說不出話為止','偷窺可是是男人的浪漫啊! 是浪浪浪浪...浪漫啊!','唯有賭上性命的人，才能稱之為英雄。\n保護同伴，拯救女人，賭上自己吧!遇到挫折也沒關係，受到打擊也無訪，盡情哭泣吧!\n失敗為成功之母。貫徹自己的願望，喊出自己的想法。\n如此一來，那才是這是世上最頂天立地的英雄。']
@@ -166,8 +166,8 @@ def handle_message(event):
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
         line_bot_api.reply_message(event.reply_token, message)
     elif '顏藝滿分' in msg :
-        message = TextSendMessage(text='顏藝滿分')
-        line_bot_api.reply_message(event.reply_token, message)
+        #message = TextSendMessage(text='顏藝滿分')
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='顏藝滿分'))
 
 
 
