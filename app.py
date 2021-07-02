@@ -15,6 +15,7 @@ from message import *
 from new import *
 from Function import *
 from quickstart import *
+from drive_list import *
 #======這裡是呼叫的檔案內容=====
 
 #======python的函數庫==========
@@ -209,17 +210,7 @@ def handle_message(event):
          
     elif '機器人自我介紹' in msg :
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
-        results = service.files().list(
-        pageSize=10, fields="nextPageToken, files(id, name)").execute()
-        items = results.get('files', [])
-
-        if not items:
-            print('No files found.')
-        else:
-            print('Files:')
-            for item in items:
-                print(u'{0} ({1})'.format(item['name'], item['id']))
-         
+        
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
             
