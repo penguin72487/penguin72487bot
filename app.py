@@ -209,6 +209,7 @@ def handle_message(event):
          
     elif '機器人自我介紹' in msg :
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
+        main()
          
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
