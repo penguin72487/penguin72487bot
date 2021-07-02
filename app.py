@@ -23,12 +23,6 @@ import datetime
 import time
 import random
 #======python的函數庫==========
-#======google drive的函數庫==========
-from __future__ import print_function
-from googleapiclient import discovery
-from httplib2 import Http
-from oauth2client import file, client, tools
-#======google drive 的函數庫==========
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
