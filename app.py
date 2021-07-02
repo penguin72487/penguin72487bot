@@ -7,7 +7,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import *
-import random
+
 
 
 #======這裡是呼叫的檔案內容=====
@@ -20,7 +20,19 @@ from Function import *
 import tempfile, os
 import datetime
 import time
+import random
 #======python的函數庫==========
+#======google drive的函數庫==========
+from __future__ import print_function
+from googleapiclient import discovery
+from httplib2 import Http
+from oauth2client import file, client, tools
+import os.path
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+from google.oauth2.credentials import Credentials
+#======google drive 的函數庫==========
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
@@ -54,7 +66,7 @@ def handle_message(event):
     #if '最新合作廠商' in msg:
     #   message = imagemap_message()
     #    
-    if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg:
+    if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg or 'www' in msg or 'WWW' in msg or '草' in msg:
         s_List=['哈哈','笑死','呵呵',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
         message = TextSendMessage(text=random.choice(s_List))
          
