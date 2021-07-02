@@ -67,6 +67,7 @@ def handle_message(event):
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
         elif '渣男.jpg' in msg :
+            line_bot_api.reply_message(event.reply_token, message='圖片支援')
             web_Rul = "https://imgur.com/fxzh9PQ.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
@@ -167,7 +168,20 @@ def handle_message(event):
         message = TextSendMessage(text='蛤甚麼?你今天月色真美')
          
     elif '晚安' in msg :
-        message = TextSendMessage(text=' 晚安哦(•ө•)♡')
+        
+        s_List=['晚安呀',
+                '晚安哦(•ө•)♡',
+                '晚安ㄛ(*´ω｀*)',
+                '晚安呀ฅ^•ﻌ•^ฅ',
+                '晚安呀(◍•ᴗ•◍)✧*。',
+                '晚安呦',
+                '晚安囉',
+                '晚安呀(´∩｡• ᵕ •｡∩`)',
+                '晚安',
+                '晚安V●ᴥ●V',
+                '晚安ㄛ(*´ω｀*)']
+        message = TextSendMessage(text=random.choice(s_List))
+        message = TextSendMessage(text='晚安哦(•ө•)♡')
          
     elif '¿?' in msg :
         message = TextSendMessage(text='¿?是在69 --陳永宸')
@@ -176,7 +190,8 @@ def handle_message(event):
         message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
           
     elif '佳句' in msg or '名言' in msg :
-        s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸','干，你馬子喔---陳占棟',
+        s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸',
+                '干，你馬子喔---陳占棟',
                 '有交無類，有交錢就不分類---陳永宸',
                 '陳永宸:\n只要有格子都是稿紙。\n2021/4/1',
                 '陳永宸：\n婆蘿們教....\n2021/4/15']
