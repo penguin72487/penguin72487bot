@@ -27,11 +27,6 @@ from __future__ import print_function
 from googleapiclient import discovery
 from httplib2 import Http
 from oauth2client import file, client, tools
-import os.path
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
 #======google drive 的函數庫==========
 
 app = Flask(__name__)
