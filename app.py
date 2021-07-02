@@ -212,9 +212,7 @@ def handle_message(event):
          
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
-    
-    elif '合併' in msg :
-        main()
+            
     line_bot_api.reply_message(event.reply_token, message)
     
 
