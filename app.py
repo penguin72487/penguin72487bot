@@ -209,6 +209,10 @@ def handle_message(event):
          
     elif '機器人自我介紹' in msg :
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
+        results = service.files().list(
+        pageSize=10, fields="nextPageToken, files(id, name)").execute()
+        items = results.get('files', [])
+
         if not items:
             print('No files found.')
         else:
