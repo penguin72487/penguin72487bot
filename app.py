@@ -181,7 +181,6 @@ def handle_message(event):
                 '晚安V●ᴥ●V',
                 '晚安ㄛ(*´ω｀*)']
         message = TextSendMessage(text=random.choice(s_List))
-        message = TextSendMessage(text='晚安哦(•ө•)♡')
          
     elif '¿?' in msg :
         message = TextSendMessage(text='¿?是在69 --陳永宸')
