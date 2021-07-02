@@ -15,7 +15,7 @@ from message import *
 from new import *
 from Function import *
 from quickstart import *
-from drive_list import *
+#from drive_list import *
 #======這裡是呼叫的檔案內容=====
 
 #======python的函數庫==========
