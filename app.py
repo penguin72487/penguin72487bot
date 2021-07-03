@@ -235,7 +235,7 @@ def handle_message(event):
     elif '非洲' in msg :
         web_Rul = "https://www.youtube.com/watch?v=D0dBptGRTvc"
         message = VideoMessage()(original_content_url= web_Rul,
-                                   preview_image_url = web_Rul )
+                                   preview_image_url = 'https://i.imgur.com/rcsHLYL.jpg' )
             
     line_bot_api.reply_message(event.reply_token, message)
     
