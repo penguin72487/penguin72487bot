@@ -14,8 +14,8 @@ from linebot.models import *
 from message import *
 from new import *
 from Function import *
-from quickstart import *
-from drive_list import *
+#from quickstart import *
+#from drive_list import *
 #======這裡是呼叫的檔案內容=====
 
 #======python的函數庫==========
@@ -231,49 +231,6 @@ def handle_message(event):
     line_bot_api.reply_message(event.reply_token, message)
     
 
-    
-        
-
-
-
-
-
-#   else :
-#    if '開啟機器人' in msg:
-#        flag = 1
-#        message = TextSendMessage(text='flag=' + flag+'開啟好了' )
-#         
-#    elif '機器人狀態' in msg:
-#        if flag==0:
-#            message = TextSendMessage(text='flag=' + flag+'現在狀態是開啟的' )
-#             
-#        else :
-#            message = TextSendMessage(text='flag=' + flag+'現在狀態是關閉的' )
-#           
-
-
-
-
-
-
-
-
-
-        #elif '註冊會員' in msg:
-        #   message = Confirm_Template()
-        #    
-        #elif '旋轉木馬' in msg:
-        #   message = Carousel_Template()
-        #    
-        #elif '圖片畫廊' in msg:
-        #    message = test()
-        #     
-        #elif '功能列表' in msg:
-        #    message = function_list()
-        #     
-        #else:
-        #    message = TextSendMessage(text='抱歉不支援喔')
-        #     
 
 import os
 if __name__ == "__main__":
