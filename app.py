@@ -24,8 +24,8 @@ import datetime
 import time
 import random
 #======python的函數庫==========
-os.system("python drive_list.py")
-os.system("python quicksart.py")
+#os.system("python drive_list.py")
+#os.system("python quicksart.py")
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
@@ -225,7 +225,7 @@ def handle_message(event):
          
     elif '機器人自我介紹' in msg :
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')
-        quickatart.main()
+        main()
         
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
