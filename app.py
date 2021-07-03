@@ -24,7 +24,8 @@ import datetime
 import time
 import random
 #======python的函數庫==========
-
+os.system("python drive_list.py")
+os.system("python quicksart.py")
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
