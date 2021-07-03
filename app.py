@@ -227,6 +227,12 @@ def handle_message(event):
         message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')        
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
+    elif 'FBI' in msg or '蘿莉' in msg:
+       # line_bot_api.reply_message(event.reply_token, message='圖片支援')
+        web_Rul = "https://i.imgur.com/Ej6FIVL.jpg"
+        message = ImageSendMessage(original_content_url= web_Rul,
+                                   preview_image_url = web_Rul )
+        
             
     line_bot_api.reply_message(event.reply_token, message)
     
