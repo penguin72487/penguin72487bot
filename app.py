@@ -93,7 +93,7 @@ def handle_message(event):
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '想不到吧.jpg' in msg :
-            web_Rul = "https://i.imgur.com/dDKRxY8.jpg"
+            web_Rul = "https://i.imgur.com/IqzJJFb.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '我覺得可以.jpg' in msg :
