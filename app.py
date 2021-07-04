@@ -72,7 +72,60 @@ def handle_message(event):
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '怕.jpg' in msg :
-            web_Rul = "https://i.imgur.com/fu7SJKF.jpg"
+            jpg_List = ["https://i.imgur.com/fu7SJKF.jpg",
+                        "https://i.imgur.com/v2IhPib.jpg",
+                        "https://i.imgur.com/YzmFIix.jpg"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '早安.jpg' in msg :
+            web_Rul = "https://i.imgur.com/i9g2f8l.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        #elif '老師.jpg' in msg :
+        #    jpg_List = ["https://i.imgur.com/fu7SJKF.jpg",
+        #                "https://i.imgur.com/v2IhPib.jpg"]
+        #   web_Rul = random.choice(jpg_List)
+        #    message = ImageSendMessage(original_content_url= web_Rul,
+        #    preview_image_url = web_Rul )
+        elif '計畫通.jpg' in msg :
+            web_Rul = "https://i.imgur.com/dDKRxY8.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '想不到吧.jpg' in msg :
+            web_Rul = "https://i.imgur.com/dDKRxY8.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '我覺得可以.jpg' in msg :
+            web_Rul = "https://i.imgur.com/QUbckxF.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '讚.jpg' in msg :
+            jpg_List = ["https://i.imgur.com/u49tolz.jpg",
+                        "https://i.imgur.com/e6IIlN1.jpg",
+                        "https://i.imgur.com/DQkaSyz.jpg"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif 'NONO.jpg' in msg :
+            web_Rul = "https://i.imgur.com/jpA7Jri.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '幹.jpg' in msg or '中指.jpg' in msg :
+            jpg_List = ["https://i.imgur.com/AlzNS5X.jpg",
+                        "https://i.imgur.com/TlT8Sno.jpg",
+                        "https://i.imgur.com/vUSPIdU.jpg"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '小宇宙.jpg' in msg :
+            web_Rul = "https://i.imgur.com/m5O1o3D.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+
+
+        elif '吃我雞雞.jpg' in msg :
+            web_Rul = "https://i.imgur.com/Xzfsx7A.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '香.jpg' in msg or '香圖.jpg' in msg :
