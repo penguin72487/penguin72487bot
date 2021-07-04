@@ -118,7 +118,9 @@ def handle_message(event):
             preview_image_url = web_Rul )
         
 
-             
+    elif '@非洲'in msg :
+         message = TextSendMessage(text='')
+
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
         s_List=['是的類排一','是的肋排一','再說笑話阿']
         message = TextSendMessage(text=random.choice(s_List))
