@@ -68,8 +68,11 @@ def handle_message(event):
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
         elif '渣男.jpg' in msg :
-            #line_bot_api.reply_message(event.reply_token, message='圖片支援')
             web_Rul = "https://i.imgur.com/fxzh9PQ.jpg"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
+        elif '怕.jpg' in msg :
+            web_Rul = "https://i.imgur.com/fu7SJKF.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '香.jpg' in msg or '香圖.jpg' in msg :
