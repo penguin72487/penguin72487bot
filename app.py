@@ -172,10 +172,24 @@ def handle_message(event):
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
+    elif '劉馨榆.jpg' in msg :
+            jpg_List = ["https://cdn.discordapp.com/attachments/793784117928919050/861619698818088970/received_339849674181465.jpeg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/839423776290635805/received_211455113824280.jpeg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/839357667730391057/received_148720903877578.jpeg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/826371760898179082/received_143738594240712.jpeg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/826371760613621830/received_1163974684041119.jpeg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/810682770745065502/post_149540338_427429501818867_6961117537140636923_n.jpg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/805361583614197790/FB_IMG_1546526649884.jpg",
+                        "https://cdn.discordapp.com/attachments/793784117928919050/805361583424405524/FB_IMG_1546526749457.jpg"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
         
 
     elif '@非洲'in msg :
          message = TextSendMessage(text='')
+    elif '愛你喔' in msg or '愛你喔 啾咪' in msg:
+        message = TextSendMessage(text='好甲，我對流星雨是一心一意的')
 
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
         s_List=['是的類排一','是的肋排一','再說笑話阿']
