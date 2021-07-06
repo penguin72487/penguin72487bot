@@ -103,7 +103,8 @@ def handle_message(event):
         elif '讚.jpg' in msg :
             jpg_List = ["https://i.imgur.com/u49tolz.jpg",
                         "https://i.imgur.com/e6IIlN1.jpg",
-                        "https://i.imgur.com/DQkaSyz.jpg"]
+                        "https://i.imgur.com/DQkaSyz.jpg",
+                        "https://i.imgur.com/OJGNyqu.jpg"]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
@@ -114,7 +115,8 @@ def handle_message(event):
         elif '幹.jpg' in msg or '中指.jpg' in msg :
             jpg_List = ["https://i.imgur.com/AlzNS5X.jpg",
                         "https://i.imgur.com/TlT8Sno.jpg",
-                        "https://i.imgur.com/vUSPIdU.jpg"]
+                        "https://i.imgur.com/vUSPIdU.jpg",
+                        "https://images.chinatimes.com/newsphoto/2021-05-16/656/20210516001265.jpg"]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
@@ -136,6 +138,7 @@ def handle_message(event):
                         "https://cdn.discordapp.com/attachments/743143275837259897/850302174890426368/image0.jpg",
                         "https://cdn.discordapp.com/attachments/743143275837259897/789460685233848340/IMG_20201218_195102.jpg",
                         "https://i.imgur.com/UQAn4bw.jpg",
+                        "https://i.imgur.com/6fh6iGB.gif",
                         "https://i.kym-cdn.com/photos/images/original/001/862/458/0d7.jpg",
                         "https://cdn.discordapp.com/attachments/743143275837259897/765967898555711568/image0.png",
                         "https://cdn.discordapp.com/attachments/743143275837259897/765967706482147378/image0.png",
@@ -172,7 +175,7 @@ def handle_message(event):
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
-    elif '劉馨榆.jpg' in msg :
+        elif '劉馨榆.jpg' in msg :
             jpg_List = ["https://cdn.discordapp.com/attachments/793784117928919050/861619698818088970/received_339849674181465.jpeg",
                         "https://cdn.discordapp.com/attachments/793784117928919050/839423776290635805/received_211455113824280.jpeg",
                         "https://cdn.discordapp.com/attachments/793784117928919050/839357667730391057/received_148720903877578.jpeg",
