@@ -189,7 +189,8 @@ def handle_message(event):
     elif '@非洲'in msg :
          message = TextSendMessage(text='')
     elif '愛你喔' in msg or '愛你喔 啾咪' in msg:
-        message = TextSendMessage(text='好甲，我對流星雨是一心一意的')
+        s_List=['好甲，我對流星雨是一心一意的','不要誘惑我，我對流星雨是一心一意的','再說笑話阿']
+        message = TextSendMessage(text=random.choice(s_List))
 
     elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
         s_List=['是的類排一','是的肋排一','再說笑話阿']
