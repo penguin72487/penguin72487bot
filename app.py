@@ -58,7 +58,7 @@ def handle_message(event):
     #if '最新合作廠商' in msg:
     #   message = imagemap_message()
     #    
-    if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg or 'www' in msg or 'WWW' in msg or '草' in msg:
+    if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or '好笑' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg or 'www' in msg or 'WWW' in msg or '草' in msg:
         s_List=['哈哈','笑死','呵呵',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
         message = TextSendMessage(text=random.choice(s_List))
          
