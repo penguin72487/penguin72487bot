@@ -88,7 +88,7 @@ def handle_message(event):
         #   web_Rul = random.choice(jpg_List)
         #    message = ImageSendMessage(original_content_url= web_Rul,
         #    preview_image_url = web_Rul )
-        elif '計畫通.jpg' in msg :
+        elif ' ' in msg :
             web_Rul = "https://i.imgur.com/dDKRxY8.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
@@ -195,7 +195,7 @@ def handle_message(event):
         s_List=['好甲，我對流星雨是一心一意的','不要誘惑我，我對流星雨是一心一意的','再說笑話阿']
         message = TextSendMessage(text=random.choice(s_List))
 
-    elif '我不是學霸' in msg or '我很爛' in msg or '我爛' in msg:
+    elif '我不是學霸' in msg or '我很爛' in msg :
         s_List=['是的類排一','是的肋排一','再說笑話阿']
         message = TextSendMessage(text=random.choice(s_List))
          
@@ -219,8 +219,8 @@ def handle_message(event):
     elif '企鵝遊戲' in msg :
         message = TextSendMessage(text='企鵝遊戲可以玩了喔~')
          
-    elif '探究' in msg :
-        message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近企鵝寫的規則')
+   # elif '探究' in msg :
+   #     message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近企鵝寫的規則')
          
     elif '讀書' in msg :
         s_List=['我都不讀的','我都沒讀','我就梅毒']
