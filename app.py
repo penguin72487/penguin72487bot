@@ -339,6 +339,7 @@ def handle_message(event):
                 '晚安呀(´∩｡• ᵕ •｡∩`)',
                 '晚安',
                 '晚安V●ᴥ●V',
+                '晚安呀( ╹▽╹ ) ',
                 '晚安ㄛ(*´ω｀*)']
         message = TextSendMessage(text=random.choice(s_List))
          
