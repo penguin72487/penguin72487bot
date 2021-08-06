@@ -294,7 +294,7 @@ def handle_message(event):
     elif '團長' in msg :
         message = TextSendMessage(text='團長唱歌不好聽' )
          
-    elif '\|/' in msg:
+    elif '上香' in msg or'\|/' in msg:
         message = TextSendMessage(text='\|/' )
          
     elif '節奏樂隊' in msg :
