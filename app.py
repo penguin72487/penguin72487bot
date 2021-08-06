@@ -404,7 +404,7 @@ def handle_message(event):
                 'floccinaucinihilipilification是輕蔑的意思',
                 '世界歷史上曾消失過十天為1752年5/30~6/8',
                 '人類和野生虎鯨的互動致死率是0',
-                '座頭鯨有事沒事就會去用尾巴拍打虎鯨']
+                '座頭鯨有事沒事就會去用胸鰭拍打虎鯨']
         message = TextSendMessage(text=random.choice(s_List))
 
     elif '佳句' in msg or '名言' in msg :
