@@ -324,7 +324,9 @@ def handle_message(event):
                 'https://www.youtube.com/watch?v=45g3i7P_e7I',
                 'https://www.youtube.com/watch?v=68FK7Caserg',
                 'https://www.youtube.com/watch?v=z2Thn9ysDTo',
+                'https://www.youtube.com/watch?v=xA3px-brPWo',
                 'https://www.youtube.com/watch?v=CaksNlNniis',
+                'https://www.youtube.com/watch?v=Yw7It7rufZM',
                 'https://www.youtube.com/watch?v=HrmuxLlkkOg']
         message = TextSendMessage(text=random.choice(s_List))
     elif '讀書' in msg :
@@ -391,7 +393,20 @@ def handle_message(event):
          
     elif '義大利麵' in msg :
         message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
-          
+
+    elif '冷知識' in msg :
+        s_List=['我們身體內一半的 蘿̶莉̶    血小板是從肺製造的',
+                '北極熊的毛是透明的，毛是黑色的',
+                '科技海綿的原料是三聚氰胺做的喔，不過不要碰到熱水就沒事了。',
+                '數據是自然數據，沒有人維修改的，雜亂無章的數據，譬如國家人口、YT影片觀看次數，數據的開頭數字出現機率最高的數字是1喔',
+                'Taumatawhakatangihangakoauauotamateapokaiwhenuakitanatahu這個地方在紐西蘭喔',
+                '淡水這個地名的官方使用過的羅馬拼音有三種，Danshui、Tamsui、Tamshui，沒有使用過Dansui',
+                'floccinaucinihilipilification是輕蔑的意思',
+                '世界歷史上曾消失過十天為1752年5/30~6/8',
+                '人類和野生虎鯨的互動致死率是0',
+                '座頭鯨有事沒事就會去用尾巴拍打虎鯨']
+        message = TextSendMessage(text=random.choice(s_List))
+
     elif '佳句' in msg or '名言' in msg :
         s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸',
                 '干，你馬子喔---陳占棟',
