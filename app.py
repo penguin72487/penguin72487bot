@@ -283,7 +283,50 @@ def handle_message(event):
          
    # elif '探究' in msg :
    #     message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近企鵝寫的規則')
-         
+    elif '來首歌' in msg or '給我一首歌的時間' in msg or '音樂' in msg :
+        s_List=['https://www.youtube.com/watch?v=mHmB5mhkuP0',
+                'https://www.youtube.com/watch?v=1N5mD2qle7A',
+                'https://www.youtube.com/watch?v=AMmDgBXwq9A',
+                'https://www.youtube.com/watch?v=Q9L1EqUkQNk',
+                'https://www.youtube.com/watch?v=fzQ6gRAEoy0',
+                'https://www.youtube.com/watch?v=L2LB12IxLDU',
+                'https://www.youtube.com/watch?v=zQ2LfW-DWDc',
+                'https://www.youtube.com/watch?v=hpI5vMxYJ_k',
+                'https://www.youtube.com/watch?v=N-YuSKeFMxY',
+                'https://www.youtube.com/watch?v=uT3SBzmDxGk',
+                'https://www.youtube.com/watch?v=-LZxk09LNaM',
+                'https://www.youtube.com/watch?v=qAkM8QGLbuo',
+                'https://www.youtube.com/watch?v=-x8OXQiwFK4',
+                'https://www.youtube.com/watch?v=a-TY-Nbqd_w',
+                'https://www.youtube.com/watch?v=yk18LbDnDQU',
+                'https://www.youtube.com/watch?v=JqN4_mufE2U',
+                'https://www.youtube.com/watch?v=Xj3gU3jACe8',
+                'https://www.youtube.com/watch?v=AN0rQR0RlOM',
+                'https://www.youtube.com/watch?v=BoAxgDfEIyY',
+                'https://www.youtube.com/watch?v=L_REt-KZKCM',
+                'https://www.youtube.com/watch?v=dPjdmPAhJWs',
+                'https://www.youtube.com/watch?v=gJGlfgEgmDY',
+                'https://www.youtube.com/watch?v=sVZpHFXcFJw',
+                'https://www.youtube.com/watch?v=_mkiGMtbrPM',
+                'https://www.youtube.com/watch?v=fB8TyLTD7EE',
+                'https://www.youtube.com/watch?v=YAXTn0E-Zgo',
+                'https://www.youtube.com/watch?v=SX_ViT4Ra7k',
+                'https://www.youtube.com/watch?v=DuMqFknYHBs',
+                'https://www.youtube.com/watch?v=TQ8WlA2GXbk',
+                'https://www.youtube.com/watch?v=PDSkFeMVNFs',
+                'https://www.youtube.com/watch?v=a2GujJZfXpg',
+                'https://www.youtube.com/watch?v=EQ94zflNqn4',
+                'https://www.youtube.com/watch?v=-uzuhqQIaTM',
+                'https://www.youtube.com/watch?v=a23945btJYw',
+                'https://www.youtube.com/watch?v=kUNMc4DLHG0',
+                'https://www.youtube.com/watch?v=1_lap6dzSUc',
+                'https://www.youtube.com/watch?v=h_wb3LfOMw4',
+                'https://www.youtube.com/watch?v=45g3i7P_e7I',
+                'https://www.youtube.com/watch?v=68FK7Caserg',
+                'https://www.youtube.com/watch?v=z2Thn9ysDTo',
+                'https://www.youtube.com/watch?v=CaksNlNniis',
+                'https://www.youtube.com/watch?v=HrmuxLlkkOg']
+        message = TextSendMessage(text=random.choice(s_List))
     elif '讀書' in msg :
         s_List=['我都不讀的','我都沒讀','我就梅毒']
         message = TextSendMessage(text=random.choice(s_List))
@@ -294,7 +337,7 @@ def handle_message(event):
     elif '團長' in msg :
         message = TextSendMessage(text='團長唱歌不好聽' )
          
-    elif '上香' in msg or'\|/' in msg:
+    elif '懷念他'in msg or '上香' in msg or'\|/' in msg:
         message = TextSendMessage(text='\|/' )
          
     elif '節奏樂隊' in msg :
