@@ -93,7 +93,10 @@ def handle_message(event):
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '想不到吧.jpg' in msg :
-            web_Rul = "https://i.imgur.com/IqzJJFb.jpg"
+            jpg_List = ["https://i.imgur.com/IqzJJFb.jpg",
+                        "https://i.imgur.com/IqzJJFb.jpg",
+                        ]
+            web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
         elif '我覺得可以.jpg' in msg :
@@ -404,6 +407,8 @@ def handle_message(event):
                 'floccinaucinihilipilification是輕蔑的意思',
                 '世界歷史上曾消失過十天為1752年5/30~6/8',
                 '人類和野生虎鯨的互動致死率是0',
+                '現在俄羅斯方塊移動方塊的最快的技巧是rolling',
+                '我有一張傳說中拔掉會讓電腦性能倍增的顯卡... GT 210'
                 '座頭鯨有事沒事就會去用胸鰭拍打虎鯨']
         message = TextSendMessage(text=random.choice(s_List))
 
