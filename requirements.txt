@@ -11,3 +11,13 @@ httplib2
 uritemplate
 WebTest
 future
+pytest
+pytest-pep8
+pytest-cov
+responses
+tox
+wheel
+sphinx
+sphinx_rtd_theme
+pypandoc
+twine
