@@ -361,6 +361,10 @@ def handle_message(event):
                         "https://i.imgur.com/fPvZmKm.jpg",
                         "https://i.imgur.com/JUcCyHk.jpg",
                         "https://i.imgur.com/MKgj9uP.jpg",
+                        "https://i.imgur.com/3ZRoo49.jpg",
+                        "https://i.imgur.com/RqxuPUM.jpg",
+                        "https://i.imgur.com/UJYKLhG.jpg",
+                        "https://i.imgur.com/4T6Zqn9.jpg",
                         "https://i.imgur.com/uk71sFX.jpg"]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
