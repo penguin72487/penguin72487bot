@@ -54,7 +54,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     print('使用者 ID: '+ event.source.user_id)
-    print('群組 ID: '+ event.SourceUser.group_id)
+    print('群組 ID: '+ event.SourceGroup)
     if  'U7a317b8a411250528e4d9ca917815ef8' in event.source.user_id :
         message = TextSendMessage(text='祝爸爸，父親節快樂~~~')
         line_bot_api.reply_message(event.reply_token, message)
