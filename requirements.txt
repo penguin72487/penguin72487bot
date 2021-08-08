@@ -10,3 +10,4 @@ pyOpenSSL
 httplib2
 uritemplate
 WebTest
+future
