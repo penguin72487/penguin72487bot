@@ -53,7 +53,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    print('使用者 ID: {event.source.userId}')
+    print('使用者 ID: '+ event.source.userId)
   #  flag = 1
 #   if flag ==1 :
     #if '最新合作廠商' in msg:
