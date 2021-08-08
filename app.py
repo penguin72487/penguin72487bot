@@ -54,6 +54,10 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     print('使用者 ID: '+ event.source.user_id)
+    if event.soure.user_id=="U7a317b8a411250528e4d9ca917815ef8" :
+        message = TextSendMessage(text='祝爸爸，父親節快樂~~~')
+        line_bot_api.reply_message(event.reply_token, message)
+
   #  flag = 1
 #   if flag ==1 :
     #if '最新合作廠商' in msg:
