@@ -54,7 +54,7 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     print('使用者 ID: '+ event.source.user_id)
-    if event.soure.user_id=="U7a317b8a411250528e4d9ca917815ef8" :
+    if  'U7a317b8a411250528e4d9ca917815ef8' in event.source.user_id :
         message = TextSendMessage(text='祝爸爸，父親節快樂~~~')
         line_bot_api.reply_message(event.reply_token, message)
 
@@ -349,7 +349,7 @@ def handle_message(event):
          
     elif '懷念他'in msg or '上香' in msg or'\|/' in msg:
         message = TextSendMessage(text='\|/' )
-    elif '父親節' in msg or event.source.user_id == 'U123':
+    elif '父親節' in msg or 'U7a317b8a411250528e4d9ca917815ef8' in event.source.user_id :
             jpg_List = ["https://i.imgur.com/tRtBxon.jpg",
                         "https://i.imgur.com/CmGnJeO.jpg",
                         "https://i.imgur.com/13y608C.jpg",
