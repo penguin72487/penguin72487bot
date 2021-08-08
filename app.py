@@ -345,7 +345,17 @@ def handle_message(event):
          
     elif '懷念他'in msg or '上香' in msg or'\|/' in msg:
         message = TextSendMessage(text='\|/' )
-         
+    elif '父親節' in msg or event.source.user_id == 'U123':
+            jpg_List = ["https://i.imgur.com/tRtBxon.jpg",
+                        "https://i.imgur.com/CmGnJeO.jpg",
+                        "https://i.imgur.com/13y608C.jpg",
+                        "https://i.imgur.com/ffbd2iG.jpg",
+                        "https://i.imgur.com/G8LCj5q.jpg",
+                        "https://i.imgur.com/lXxBpoI.jpg",
+                        "https://i.imgur.com/uk71sFX.jpg"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
     elif '節奏樂隊' in msg :
         message = TextSendMessage(text='企鵝跟流星雨遇見的方' )
          
