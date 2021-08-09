@@ -55,10 +55,6 @@ def handle_message(event):
     msg = event.message.text
     print('使用者 ID: '+ event.source.user_id)
     #print('群組 ID: '+ event.source.grup_id)
-    if  'U7a317b8a411250528e4d9ca917815ef8' in event.source.user_id :
-        message = TextSendMessage(text='祝爸爸，父親節快樂~~~')
-        line_bot_api.reply_message(event.reply_token, message)
-
   #  flag = 1
 #   if flag ==1 :
     #if '最新合作廠商' in msg:
@@ -338,6 +334,7 @@ def handle_message(event):
                 'https://www.youtube.com/watch?v=Yw7It7rufZM',
                 'https://www.youtube.com/watch?v=HrmuxLlkkOg']
         message = TextSendMessage(text=random.choice(s_List))
+        
     elif '讀書' in msg :
         s_List=['我都不讀的','我都沒讀','我就梅毒']
         message = TextSendMessage(text=random.choice(s_List))
@@ -350,26 +347,7 @@ def handle_message(event):
          
     elif '懷念他'in msg or '上香' in msg or'\|/' in msg:
         message = TextSendMessage(text='\|/' )
-    elif '父親節' in msg or 'U7a317b8a411250528e4d9ca917815ef8' in event.source.user_id  or "@錢有根(樹根)" in msg:
-            jpg_List = ["https://i.imgur.com/tRtBxon.jpg",
-                        "https://i.imgur.com/CmGnJeO.jpg",
-                        "https://i.imgur.com/13y608C.jpg",
-                        "https://i.imgur.com/ffbd2iG.jpg",
-                        "https://i.imgur.com/G8LCj5q.jpg",
-                        "https://i.imgur.com/IOy3zPu.jpg",
-                        "https://i.imgur.com/Uhl8IFk.jpg",
-                        "https://i.imgur.com/lXxBpoI.jpg",
-                        "https://i.imgur.com/fPvZmKm.jpg",
-                        "https://i.imgur.com/JUcCyHk.jpg",
-                        "https://i.imgur.com/MKgj9uP.jpg",
-                        "https://i.imgur.com/3ZRoo49.jpg",
-                        "https://i.imgur.com/RqxuPUM.jpg",
-                        "https://i.imgur.com/UJYKLhG.jpg",
-                        "https://i.imgur.com/4T6Zqn9.jpg",
-                        "https://i.imgur.com/uk71sFX.jpg"]
-            web_Rul = random.choice(jpg_List)
-            message = ImageSendMessage(original_content_url= web_Rul,
-            preview_image_url = web_Rul )
+
     elif '節奏樂隊' in msg :
         message = TextSendMessage(text='企鵝跟流星雨遇見的方' )
          
