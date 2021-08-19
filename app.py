@@ -1,5 +1,6 @@
-from flask import Flask, request, abort
 from __future__ import print_function
+from flask import Flask, request, abort
+
 from linebot import (
     LineBotApi, WebhookHandler
 )
