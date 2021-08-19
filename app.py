@@ -1,5 +1,5 @@
 from flask import Flask, request, abort
-
+from __future__ import print_function
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -28,7 +28,7 @@ import random
 #os.system("python quicksart.py")
 
 #======登入google drive api==========
-from __future__ import print_function
+
 import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
