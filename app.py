@@ -437,7 +437,7 @@ def handle_message(event):
             print('Files:')
             message = TextSendMessage(text='Files:')
         for item in items:
-            s_Out = item['name']+item['id']+"\n"
+            s_Out = s_Out+ item['name']+item['id']+"\n"
             print(u'{0} ({1})'.format(item['name'], item['id']))
             message = TextSendMessage(text = s_Out)
         
