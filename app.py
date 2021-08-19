@@ -70,7 +70,7 @@ service = build('drive', 'v3', credentials=creds)
 
 # Call the Drive v3 API
 results = service.files().list(
-    pageSize=10,fileId="1D1xMA3iAVLtMI2g_pwO3sKh_-WdDSfsf", fields="files(id, name)").execute()
+    pageSize=10, fields="nextPageToken, files(id, name)").execute()
 items = results.get('files', [])
 
 if not items:
@@ -79,6 +79,7 @@ else:
     print('Files:')
     for item in items:
         print(u'{0} ({1})'.format(item['name'], item['id']))
+
 
 
 # 監聽所有來自 /callback 的 Post Request
@@ -425,7 +426,21 @@ def handle_message(event):
          
     elif '月色' in msg :
         message = TextSendMessage(text='蛤甚麼?你今天月色真美')
-    
+
+    elif 'quickstart.py' in msg :
+        results = service.files().list(pageSize=10, fields="nextPageToken, files(id, name)").execute()
+        items = results.get('files', [])
+        if not items:
+            print('No files found.')
+            message = TextSendMessage(text='No files found.')
+        else:
+            print('Files:')
+            message = TextSendMessage(text='Files:')
+        for item in items:
+            s_Out = item['name']+item['id']+"\n"
+            print(u'{0} ({1})'.format(item['name'], item['id']))
+            message = TextSendMessage(text = s_Out)
+        
     elif '運勢' in msg :
         s_List=["大吉",
                 "吉",
