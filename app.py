@@ -430,14 +430,15 @@ def handle_message(event):
     elif 'quickstart.py' in msg :
         results = service.files().list(pageSize=10, fields="nextPageToken, files(id, name)").execute()
         items = results.get('files', [])
+        s_Out = ""
         if not items:
             print('No files found.')
-            message = TextSendMessage(text='No files found.')
+            s_Out='No files found.'
         else:
             print('Files:')
-            message = TextSendMessage(text='Files:')
+            s_Out='Files:'
         for item in items:
-            s_Out = s_Out+ item['name']+item['id']+"\n"
+            s_Out = item['name']+item['id']+"\n"
             print(u'{0} ({1})'.format(item['name'], item['id']))
             message = TextSendMessage(text = s_Out)
         
