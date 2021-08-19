@@ -10,6 +10,7 @@ pyOpenSSL
 httplib2
 uritemplate
 WebTest
+virtualenv
 future
 pytest
 pytest-pep8

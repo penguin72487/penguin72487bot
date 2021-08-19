@@ -425,7 +425,17 @@ def handle_message(event):
          
     elif '月色' in msg :
         message = TextSendMessage(text='蛤甚麼?你今天月色真美')
-         
+    
+    elif '運勢' in msg :
+        s_List=["大吉",
+                "吉",
+                "中吉",
+                "小吉",
+                "末吉",
+                "凶",
+                "你確定?很兇喔"]
+        message = TextSendMessage(text=random.choice(s_List))
+
     elif '晚安' in msg :
         
         s_List=['晚安呀',
