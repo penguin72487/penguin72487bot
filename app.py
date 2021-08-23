@@ -429,21 +429,6 @@ def handle_message(event):
          
     elif '月色' in msg :
         message = TextSendMessage(text='蛤甚麼?你今天月色真美')
-
-    elif 'quickstart.py' in msg :
-        results = service.files().list(pageSize=10, fields="nextPageToken, files(id, name)").execute()
-        items = results.get('files', [])
-        s_Out = ""
-        if not items:
-            print('No files found.')
-            s_Out='No files found.'
-        else:
-            print('Files:')
-            s_Out='Files:'
-        for item in items:
-            s_Out = item['name']+item['id']+"\n"
-            print(u'{0} ({1})'.format(item['name'], item['id']))
-            message = TextSendMessage(text = s_Out)
         
     elif '運勢' in msg :
         s_List=["大吉",
