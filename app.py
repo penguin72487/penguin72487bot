@@ -37,7 +37,7 @@ from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 
 # If modifying these scopes, delete the file token.json.
-SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
+SCOPES = ['https://www.googleapis.com/auth/drive.readonly.metadata']
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
@@ -112,7 +112,10 @@ def handle_message(event):
     if '呵呵' in msg or '哈哈' in msg or '笑死' in msg or '好笑' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg or 'www' in msg or 'WWW' in msg or '草' in msg:
         s_List=['哈哈','笑死','呵呵',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
         message = TextSendMessage(text=random.choice(s_List))
-         
+    elif '發圖'in msg: #功能測試區
+
+        message = TextSendMessage(text='')
+        
     elif '.jpg' in msg :
         if '哼.jpg' in msg :
             web_Rul = "https://imgur.com/8QZv1A6.jpg"
@@ -518,13 +521,15 @@ def handle_message(event):
         message = TextSendMessage(text=random.choice(s_List))
          
     elif '流星雨' in msg or '劉馨榆' in msg:
-        s_List=['企鵝喜歡的','企鵝喜歡看']
+        s_List=['企鵝喜歡的','企鵝喜歡看','企鵝喜歡劉馨瑜']
         message = TextSendMessage(text=random.choice(s_List))
          
     elif '機器人自我介紹' in msg :
-        message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')        
+        message = TextSendMessage(text='我是怠惰司教，貝特魯吉烏斯·羅曼尼康帝，自從醒來以後，就在企鵝王底下工作了')     
+
     elif '顏藝滿分' in msg :
         message = TextSendMessage(text='顏藝滿分')
+
     elif 'FBI' in msg or '蘿莉' in msg:
        # line_bot_api.reply_message(event.reply_token, message='圖片支援')
         web_Rul = "https://i.imgur.com/Ej6FIVL.jpg"

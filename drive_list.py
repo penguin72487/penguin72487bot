@@ -14,4 +14,4 @@ DRIVE = discovery.build('drive', 'v3', http=creds.authorize(Http()))
 
 files = DRIVE.files().list().execute().get('files', [])
 for f in files:
-    print(f['name'], f['mimeType'])
+    print(f['name'],f['id'])
