@@ -11,24 +11,24 @@ from linebot.models import *
 
 
 
-#======³o¸Ì¬O©I¥sªºÀÉ®×¤º®e=====
+#======é€™è£¡æ˜¯å‘¼å«çš„æª”æ¡ˆå…§å®¹=====
 from message import *
 from new import *
 from Function import *
 #from quickstart import *
 #from drive_list import *
-#======³o¸Ì¬O©I¥sªºÀÉ®×¤º®e=====
+#======é€™è£¡æ˜¯å‘¼å«çš„æª”æ¡ˆå…§å®¹=====
 
-#======pythonªº¨ç¼Æ®w==========
+#======pythonçš„å‡½æ•¸åº«==========
 import tempfile, os
 import datetime
 import time
 import random
-#======pythonªº¨ç¼Æ®w==========
+#======pythonçš„å‡½æ•¸åº«==========
 #os.system("python drive_list.py")
 #os.system("python quicksart.py")
 
-#======µn¤Jgoogle drive api==========
+#======ç™»å…¥google drive api==========
 
 import os.path
 from googleapiclient.discovery import build
@@ -82,7 +82,7 @@ else:
 
 
 
-# ºÊÅ¥©Ò¦³¨Ó¦Û /callback ªº Post Request
+# ç›£è½æ‰€æœ‰ä¾†è‡ª /callback çš„ Post Request
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
@@ -98,45 +98,45 @@ def callback():
     return 'OK'
 
 
-# ³B²z°T®§
+# è™•ç†è¨Šæ¯
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    print('¨Ï¥ÎªÌ ID: '+ event.source.user_id)
-    #print('¸s²Õ ID: '+ event.source.grup_id)
+    print('ä½¿ç”¨è€… ID: '+ event.source.user_id)
+    #print('ç¾¤çµ„ ID: '+ event.source.grup_id)
     #flag = 1
     #if flag ==1 :
-    #if '³Ì·s¦X§@¼t°Ó' in msg:
+    #if 'æœ€æ–°åˆä½œå» å•†' in msg:
     #   message = imagemap_message()
     #    
-    if '¨ş¨ş' in msg or '«¢«¢' in msg or '¯º¦º' in msg or '¦n¯º' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg or 'www' in msg or 'WWW' in msg or '¯ó' in msg or '¥L¶ıªº' in msg :
-        s_List=['«¢«¢','¯º¦º','¨ş¨ş',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
+    if 'å‘µå‘µ' in msg or 'å“ˆå“ˆ' in msg or 'ç¬‘æ­»' in msg or 'å¥½ç¬‘' in msg or 'xd' in msg or 'Xd' in msg or 'XD' in msg or 'xD' in msg or 'www' in msg or 'WWW' in msg or 'è‰' in msg or 'ä»–åª½çš„' in msg :
+        s_List=['å“ˆå“ˆ','ç¬‘æ­»','å‘µå‘µ',msg,'','','','','','','','','','','','','','','','','','','','','','','','','','','','']
         message = TextSendMessage(text=random.choice(s_List))
-    elif 'µo¹Ï'in msg: #¥\¯à´ú¸Õ°Ï
+    elif 'ç™¼åœ–'in msg: #åŠŸèƒ½æ¸¬è©¦å€
 
         message = TextSendMessage(text='')
         
     elif '.jpg' in msg :
-        if '­ó.jpg' in msg :
+        if 'å“¼.jpg' in msg :
             web_Rul = "https://imgur.com/8QZv1A6.jpg"
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
-        elif '´í¨k.jpg' in msg :
+        elif 'æ¸£ç”·.jpg' in msg :
             web_Rul = "https://i.imgur.com/fxzh9PQ.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '©È.jpg' in msg :
+        elif 'æ€•.jpg' in msg :
             jpg_List = ["https://i.imgur.com/fu7SJKF.jpg",
                         "https://i.imgur.com/v2IhPib.jpg",
                         "https://i.imgur.com/YzmFIix.jpg"]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '¦­¦w.jpg' in msg :
+        elif 'æ—©å®‰.jpg' in msg :
             web_Rul = "https://i.imgur.com/i9g2f8l.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        #elif '¦Ñ®v.jpg' in msg :
+        #elif 'è€å¸«.jpg' in msg :
         #    jpg_List = ["https://i.imgur.com/fu7SJKF.jpg",
         #                "https://i.imgur.com/v2IhPib.jpg"]
         #   web_Rul = random.choice(jpg_List)
@@ -146,18 +146,18 @@ def handle_message(event):
             web_Rul = "https://i.imgur.com/dDKRxY8.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '·Q¤£¨ì§a.jpg' in msg :
+        elif 'æƒ³ä¸åˆ°å§.jpg' in msg :
             jpg_List = ["https://i.imgur.com/IqzJJFb.jpg",
                         "https://i.imgur.com/IqzJJFb.jpg",
                         ]
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '§ÚÄ±±o¥i¥H.jpg' in msg :
+        elif 'æˆ‘è¦ºå¾—å¯ä»¥.jpg' in msg :
             web_Rul = "https://i.imgur.com/QUbckxF.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif 'Æg.jpg' in msg :
+        elif 'è®š.jpg' in msg :
             jpg_List = ["https://i.imgur.com/u49tolz.jpg",
                         "https://i.imgur.com/e6IIlN1.jpg",
                         "https://i.imgur.com/DQkaSyz.jpg",
@@ -169,7 +169,7 @@ def handle_message(event):
             web_Rul = "https://i.imgur.com/jpA7Jri.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '·F.jpg' in msg or '¤¤«ü.jpg' in msg :
+        elif 'å¹¹.jpg' in msg or 'ä¸­æŒ‡.jpg' in msg :
             jpg_List = ["https://i.imgur.com/AlzNS5X.jpg",
                         "https://i.imgur.com/TlT8Sno.jpg",
                         "https://i.imgur.com/vUSPIdU.jpg",
@@ -177,17 +177,17 @@ def handle_message(event):
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '¤p¦t©z.jpg' in msg :
+        elif 'å°å®‡å®™.jpg' in msg :
             web_Rul = "https://i.imgur.com/m5O1o3D.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
 
 
-        elif '¦Y§ÚÂûÂû.jpg' in msg :
+        elif 'åƒæˆ‘é›é›.jpg' in msg :
             web_Rul = "https://i.imgur.com/Xzfsx7A.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
-        elif '­».jpg' in msg or '­»¹Ï.jpg' in msg :
+        elif 'é¦™.jpg' in msg or 'é¦™åœ–.jpg' in msg :
             jpg_List = ["https://cdn.discordapp.com/attachments/743143275837259897/789460684986646548/IMG_20201218_195129.jpg",
                         "https://cdn.discordapp.com/attachments/743143275837259897/858409895363477533/image0.png",
                         "https://cdn.discordapp.com/attachments/743143275837259897/859373224533688340/E5CdbIwVUAAmCsI.jpeg",
@@ -254,7 +254,7 @@ def handle_message(event):
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url = web_Rul,
             preview_image_url = web_Rul )
-        elif "²Ô¤h.jpg" in msg:
+        elif "ç´³å£«.jpg" in msg:
             jpg_List = ["https://cdn.discordapp.com/attachments/862658693820973096/862660004044341298/20210708_014702.jpg",
                         "https://cdn.discordapp.com/attachments/862658693820973096/862662010138001418/IMG_20210627_152255.jpg",
                         "https://cdn.discordapp.com/attachments/862658693820973096/862663766549463040/IMG_20201229_070542.jpg",
@@ -291,7 +291,7 @@ def handle_message(event):
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
 
-        elif '¼BÄÉ·®.jpg' in msg :
+        elif 'åŠ‰é¦¨æ¦†.jpg' in msg :
             jpg_List = ["https://cdn.discordapp.com/attachments/793784117928919050/861619698818088970/received_339849674181465.jpeg",
                         "https://cdn.discordapp.com/attachments/793784117928919050/839423776290635805/received_211455113824280.jpeg",
                         "https://cdn.discordapp.com/attachments/793784117928919050/839357667730391057/received_148720903877578.jpeg",
@@ -305,42 +305,42 @@ def handle_message(event):
             preview_image_url = web_Rul )
         
 
-    elif '@«D¬w'in msg :
+    elif '@éæ´²'in msg :
         message = TextSendMessage(text='')
-    elif '±ö¬r' in msg or '¨SÅª' in msg:
-        message = TextSendMessage(text='¥øÃZ´N¨SÅª')
+    elif 'æ¢…æ¯’' in msg or 'æ²’è®€' in msg:
+        message = TextSendMessage(text='ä¼éµå°±æ²’è®€')
 
-    elif '·R§A³á' in msg or '·R§A³á ³î«}' in msg:
-        s_List=['¦n¥Ò¡A§Ú¹ï¬y¬P«B¬O¤@¤ß¤@·Nªº','¤£­n»¤´b§Ú¡A§Ú¹ï¬y¬P«B¬O¤@¤ß¤@·Nªº','¦A»¡¯º¸Üªü']
+    elif 'æ„›ä½ å–”' in msg or 'æ„›ä½ å–” å•¾å’ª' in msg:
+        s_List=['å¥½ç”²ï¼Œæˆ‘å°æµæ˜Ÿé›¨æ˜¯ä¸€å¿ƒä¸€æ„çš„','ä¸è¦èª˜æƒ‘æˆ‘ï¼Œæˆ‘å°æµæ˜Ÿé›¨æ˜¯ä¸€å¿ƒä¸€æ„çš„','å†èªªç¬‘è©±é˜¿']
         message = TextSendMessage(text=random.choice(s_List))
 
-    elif '§Ú¤£¬O¾ÇÅQ' in msg or '§Ú«ÜÄê' in msg :
-        s_List=['¬OªºÃş±Æ¤@','¬Oªº¦Ø±Æ¤@','¦A»¡¯º¸Üªü']
+    elif 'æˆ‘ä¸æ˜¯å­¸éœ¸' in msg or 'æˆ‘å¾ˆçˆ›' in msg :
+        s_List=['æ˜¯çš„é¡æ’ä¸€','æ˜¯çš„è‚‹æ’ä¸€','å†èªªç¬‘è©±é˜¿']
         message = TextSendMessage(text=random.choice(s_List))
          
-    elif '¦n³Ü' in msg :
-        message = TextSendMessage(text='¦n³Ü')
+    elif 'å¥½å–' in msg :
+        message = TextSendMessage(text='å¥½å–')
          
-    elif '¾ÇÅQ' in msg or '¿ß«}' in msg:
-        s_List=['¿ß«}','¾ÇÅQ','¦Ø±Æ¤@','¾Çª¨ª¨',msg]
+    elif 'å­¸éœ¸' in msg or 'è²“å’ª' in msg:
+        s_List=['è²“å’ª','å­¸éœ¸','è‚‹æ’ä¸€','å­¸çˆ¸çˆ¸',msg]
         message = TextSendMessage(text=random.choice(s_List))
          
-    #elif 'ª±' in msg :
-    #    message = TextSendMessage(text='¥øÃZ¹CÀ¸¥i¥Hª±¤F')
+    #elif 'ç©' in msg :
+    #    message = TextSendMessage(text='ä¼éµéŠæˆ²å¯ä»¥ç©äº†')
     #     
-    #elif '±m³J' in msg  :
-     #   s_List=['¥øÃZÁÙ¦³±m³J³á','¦Û¤v¥h§ä§ä±m³J³á']
+    #elif 'å½©è›‹' in msg  :
+     #   s_List=['ä¼éµé‚„æœ‰å½©è›‹å–”','è‡ªå·±å»æ‰¾æ‰¾å½©è›‹å–”']
      #   message = TextSendMessage(text=random.choice(s_List))
      #    
-    elif '«ç»ò¨«¸ô' in msg :
-        message = TextSendMessage(text='¹³¥øÃZ¤@¼ËÃÛµÛ¨«')
+    elif 'æ€éº¼èµ°è·¯' in msg :
+        message = TextSendMessage(text='åƒä¼éµä¸€æ¨£è¹²è‘—èµ°')
          
-    elif '¥øÃZ¹CÀ¸' in msg :
-        message = TextSendMessage(text='¥øÃZ¹CÀ¸¥i¥Hª±¤F³á~')
+    elif 'ä¼éµéŠæˆ²' in msg :
+        message = TextSendMessage(text='ä¼éµéŠæˆ²å¯ä»¥ç©äº†å–”~')
          
-   # elif '±´¨s' in msg :
-   #     message = TextSendMessage(text='¨Ó±´¨s¥øÃZ¹CÀ¸ªü¡A¬İ½Ö¥i¥H¾ã²z¦n¡A³Ì±µªñ¥øÃZ¼gªº³W«h')
-    elif '¨Ó­ººq' in msg or 'µ¹§Ú¤@­ººqªº®É¶¡' in msg or '­µ¼Ö' in msg :
+   # elif 'æ¢ç©¶' in msg :
+   #     message = TextSendMessage(text='ä¾†æ¢ç©¶ä¼éµéŠæˆ²é˜¿ï¼Œçœ‹èª°å¯ä»¥æ•´ç†å¥½ï¼Œæœ€æ¥è¿‘ä¼éµå¯«çš„è¦å‰‡')
+    elif 'ä¾†é¦–æ­Œ' in msg or 'çµ¦æˆ‘ä¸€é¦–æ­Œçš„æ™‚é–“' in msg or 'éŸ³æ¨‚' in msg :
         s_List=['https://www.youtube.com/watch?v=mHmB5mhkuP0',
                 'https://www.youtube.com/watch?v=1N5mD2qle7A',
                 'https://www.youtube.com/watch?v=AMmDgBXwq9A',
@@ -387,158 +387,159 @@ def handle_message(event):
                 'https://www.youtube.com/watch?v=HrmuxLlkkOg']
         message = TextSendMessage(text=random.choice(s_List))
         
-    elif 'Åª®Ñ' in msg :
-        s_List=['§Ú³£¤£Åªªº','§Ú³£¨SÅª','§Ú´N±ö¬r']
+    elif 'è®€æ›¸' in msg :
+        s_List=['æˆ‘éƒ½ä¸è®€çš„','æˆ‘éƒ½æ²’è®€','æˆ‘å°±æ¢…æ¯’']
         message = TextSendMessage(text=random.choice(s_List))
          
-    elif '¾÷¾¹¤Hª¬ºA' in msg:
-        message = TextSendMessage(text='²{¦bª¬ºA¬O¶}±Òªº' )
+    elif 'æ©Ÿå™¨äººç‹€æ…‹' in msg:
+        message = TextSendMessage(text='ç¾åœ¨ç‹€æ…‹æ˜¯é–‹å•Ÿçš„' )
          
-    elif '¹Îªø' in msg :
-        message = TextSendMessage(text='¹Îªø°Ûºq¤£¦nÅ¥' )
+    elif 'åœ˜é•·' in msg :
+        message = TextSendMessage(text='åœ˜é•·å”±æ­Œä¸å¥½è½' )
          
-    elif 'Ãh©À¥L'in msg or '¤W­»' in msg or'\|/' in msg:
+    elif 'æ‡·å¿µä»–'in msg or 'ä¸Šé¦™' in msg or'\|/' in msg:
         message = TextSendMessage(text='\|/' )
 
-    elif '¸`«µ¼Ö¶¤' in msg :
-        message = TextSendMessage(text='¥øÃZ¸ò¬y¬P«B¹J¨£ªº¤è' )
+    elif 'ç¯€å¥æ¨‚éšŠ' in msg :
+        message = TextSendMessage(text='ä¼éµè·Ÿæµæ˜Ÿé›¨é‡è¦‹çš„æ–¹' )
          
-    elif '´í¨k' in msg :
-        message = TextSendMessage(text='¹ï¤£°_¡A¥øÃZ¤]·í¹L´í¨k' )
+    elif 'æ¸£ç”·' in msg :
+        message = TextSendMessage(text='å°ä¸èµ·ï¼Œä¼éµä¹Ÿç•¶éæ¸£ç”·' )
          
-    elif '¤­µ¥¤À'  in msg :
-        message = TextSendMessage(text='¥øÃZ¬O¶R¤­¤ëªÑªº' )
+    elif 'äº”ç­‰åˆ†'  in msg :
+        message = TextSendMessage(text='ä¼éµæ˜¯è²·äº”æœˆè‚¡çš„' )
          
-    elif '¦b¤U¨D½Z' in msg :
-        message = TextSendMessage(text='¦b¦a¤U«°´M¨DÁÛ°m¬O§_·d¿ù¤F¬Æ»ò?' )
+    elif 'åœ¨ä¸‹æ±‚ç¨¿' in msg :
+        message = TextSendMessage(text='åœ¨åœ°ä¸‹åŸå°‹æ±‚é‚‚é€…æ˜¯å¦æéŒ¯äº†ç”šéº¼?' )
          
-    elif '³\ªï¸©' in msg :
-        message = TextSendMessage(text='§Ú¦A»¡¤@¦¸¡A¥øÃZ¹ï¦o¨S·PÄ±' )
+    elif 'è¨±è¿è±' in msg :
+        message = TextSendMessage(text='æˆ‘å†èªªä¸€æ¬¡ï¼Œä¼éµå°å¥¹æ²’æ„Ÿè¦º' )
          
-    elif '°½¬İ' in msg :
-        message = TextSendMessage(text='¥øÃZ¦b¥´©w­µªº®É­Ô¡A³£³ßÅw°½¬İ¬ü¤k¡A¦Ü©ó¬ü¤k¬O½Ö´N¤£¦h»¡¤F')
+    elif 'å·çœ‹' in msg :
+        message = TextSendMessage(text='ä¼éµåœ¨æ‰“å®šéŸ³çš„æ™‚å€™ï¼Œéƒ½å–œæ­¡å·çœ‹ç¾å¥³ï¼Œè‡³æ–¼ç¾å¥³æ˜¯èª°å°±ä¸å¤šèªªäº†')
          
-    elif '©z´µ' in msg or '¨©º¸·İ·İ' in msg :
-        s_List=['¸Ø¼ú¤k¥Íªº®É­Ô¡A­n¸Ø¼ú¨ì¦o®`²Û¦a»¡¤£¥X¸Ü¬°¤î',
-                '°½¿s¥i¬O¬O¨k¤Hªº®öº©°Ú! ¬O®ö®ö®ö®ö...®öº©°Ú!',
-                '°ß¦³½ä¤W©Ê©Rªº¤H¡A¤~¯àºÙ¤§¬°­^¶¯¡C\n«OÅ@¦P¦ñ¡A¬@±Ï¤k¤H¡A½ä¤W¦Û¤v§a!¹J¨ì®À§é¤]¨SÃö«Y¡A¨ü¨ì¥´À»¤]µL³X¡AºÉ±¡­úª_§a!\n¥¢±Ñ¬°¦¨¥\¤§¥À¡C³e¹ı¦Û¤vªºÄ@±æ¡A³Û¥X¦Û¤vªº·Qªk¡C\n¦p¦¹¤@¨Ó¡A¨º¤~¬O³o¬O¥@¤W³Ì³»¤Ñ¥ß¦aªº­^¶¯¡C']
+    elif 'å®™æ–¯' in msg or 'è²çˆ¾çˆºçˆº' in msg :
+        s_List=['èª‡çå¥³ç”Ÿçš„æ™‚å€™ï¼Œè¦èª‡çåˆ°å¥¹å®³ç¾åœ°èªªä¸å‡ºè©±ç‚ºæ­¢',
+                'å·çªºå¯æ˜¯æ˜¯ç”·äººçš„æµªæ¼«å•Š! æ˜¯æµªæµªæµªæµª...æµªæ¼«å•Š!',
+                'å”¯æœ‰è³­ä¸Šæ€§å‘½çš„äººï¼Œæ‰èƒ½ç¨±ä¹‹ç‚ºè‹±é›„ã€‚\nä¿è­·åŒä¼´ï¼Œæ‹¯æ•‘å¥³äººï¼Œè³­ä¸Šè‡ªå·±å§!é‡åˆ°æŒ«æŠ˜ä¹Ÿæ²’é—œä¿‚ï¼Œå—åˆ°æ‰“æ“Šä¹Ÿç„¡è¨ªï¼Œç›¡æƒ…å“­æ³£å§!\nå¤±æ•—ç‚ºæˆåŠŸä¹‹æ¯ã€‚è²«å¾¹è‡ªå·±çš„é¡˜æœ›ï¼Œå–Šå‡ºè‡ªå·±çš„æƒ³æ³•ã€‚\nå¦‚æ­¤ä¸€ä¾†ï¼Œé‚£æ‰æ˜¯é€™æ˜¯ä¸–ä¸Šæœ€é ‚å¤©ç«‹åœ°çš„è‹±é›„ã€‚']
         message = TextSendMessage(text=random.choice(s_List))
          
-    elif 'ªÅ¥Õ' in msg :
+    elif 'ç©ºç™½' in msg :
         message = TextSendMessage(text='')
          
-    elif '¤ë¦â' in msg :
-        message = TextSendMessage(text='µğ¬Æ»ò?§A¤µ¤Ñ¤ë¦â¯u¬ü')
+    elif 'æœˆè‰²' in msg :
+        message = TextSendMessage(text='è›¤ç”šéº¼?ä½ ä»Šå¤©æœˆè‰²çœŸç¾')
         
-    elif '¹B¶Õ' in msg :
-        s_List=["¤j¦N",
-                "¦N",
-                "¤¤¦N",
-                "¤p¦N",
-                "¥½¦N",
-                "¤¿",
-                "§A½T©w?«Ü¥û³á"]
+    elif 'é‹å‹¢' in msg :
+        s_List=["å¤§å‰",
+                "å‰",
+                "ä¸­å‰",
+                "å°å‰",
+                "æœ«å‰",
+                "å‡¶",
+                "ä½ ç¢ºå®š?å¾ˆå‡¶å–”"]
         message = TextSendMessage(text=random.choice(s_List))
 
-    elif '±ß¦w' in msg :
+    elif 'æ™šå®‰' in msg :
         
-        s_List=['±ß¦w§r',
-                '±ß¦w®@(???)?',
-                '±ß¦w£¬(*?£s?*)',
-                '±ß¦w§r?^???^?',
-                '±ß¦w§r(?????)?*¡C',
-                '±ß¦wËç',
-                '±ß¦wÅo',
-                '±ß¦w§r(?¡ä?? ? ??¡ä`)',
-                '±ß¦w',
-                '±ß¦wV¡´?¡´V',
-                '±ß¦w§r( ?¡¾? ) ',
-                '±ß¦w£¬(*?£s?*)']
+        s_List=['æ™šå®‰å‘€',
+                'æ™šå®‰å“¦(???)?',
+                'æ™šå®‰ã„›(*?Ï‰?*)',
+                'æ™šå®‰å‘€?^???^?',
+                'æ™šå®‰å‘€(?????)?*ã€‚',
+                'æ™šå®‰å‘¦',
+                'æ™šå®‰å›‰',
+                'æ™šå®‰å‘€(?âˆ©?? ? ??âˆ©`)',
+                'æ™šå®‰',
+                'æ™šå®‰Vâ—?â—V',
+                'æ™šå®‰å‘€( ?â–½? ) ',
+                'æ™šå®‰ã„›(*?Ï‰?*)']
         message = TextSendMessage(text=random.choice(s_List))
          
     elif '??' in msg :
-        message = TextSendMessage(text='??¬O¦b69 --³¯¥Ã®f')
+        message = TextSendMessage(text='??æ˜¯åœ¨69 --é™³æ°¸å®¸')
          
-    elif '¸q¤j§QÄÑ' in msg :
-        message = TextSendMessage(text='¦³ªº¸Ü¡A§Ú¥Î»ó¤Õªíºt¦Y¸q¤j§QÄÑ --³¯¥Ã®f')
+    elif 'ç¾©å¤§åˆ©éºµ' in msg :
+        message = TextSendMessage(text='æœ‰çš„è©±ï¼Œæˆ‘ç”¨é¼»å­”è¡¨æ¼”åƒç¾©å¤§åˆ©éºµ --é™³æ°¸å®¸')
 
-    elif '§Nª¾ÃÑ' in msg :
-        s_List=['§Ú­Ì¨­Åé¤º¤@¥bªº ÅÚ?²ú?    ¦å¤pªO¬O±qªÍ»s³yªº',
-                '¥_·¥ºµªº¤ò¬O³z©úªº¡A¤ò¬O¶Â¦âªº',
-                '¬ì§Ş®üºøªº­ì®Æ¬O¤T»EÙæÓi°µªº³á¡A¤£¹L¤£­n¸I¨ì¼ö¤ô´N¨S¨Æ¤F¡C',
-                '¼Æ¾Ú¬O¦ÛµM¼Æ¾Ú¡A¨S¦³¤Hºû­×§ïªº¡AÂø¶ÃµL³¹ªº¼Æ¾Ú¡AÄ´¦p°ê®a¤H¤f¡BYT¼v¤ùÆ[¬İ¦¸¼Æ¡A¼Æ¾Úªº¶}ÀY¼Æ¦r¥X²{¾÷²v³Ì°ªªº¼Æ¦r¬O1³á',
-                'Taumatawhakatangihangakoauauotamateapokaiwhenuakitanatahu³o­Ó¦a¤è¦b¯Ã¦èÄõ³á',
-                '²H¤ô³o­Ó¦a¦Wªº©x¤è¨Ï¥Î¹LªºÃ¹°¨«÷­µ¦³¤TºØ¡ADanshui¡BTamsui¡BTamshui¡A¨S¦³¨Ï¥Î¹LDansui',
-                'floccinaucinihilipilification¬O»´½°ªº·N«ä',
-                '¥@¬É¾ú¥v¤W´¿®ø¥¢¹L¢Ì¤Ñ¬°1752¦~5/30~6/8',
-                '¤HÃş©M³¥¥ÍªêÄHªº¤¬°Ê­P¦º²v¬O0',
-                '²{¦b«XÃ¹´µ¤è¶ô²¾°Ê¤è¶ôªº³Ì§Öªº§Ş¥©¬Orolling',
-                '§Ú¦³¤@±i¶Ç»¡¤¤©Ş±¼·|Åı¹q¸£©Ê¯à­¿¼WªºÅã¥d... GT 210',
-                '§Aª¾¹D¶Ü?GT710ªº©Ê¯à¤ñGT720±j',
-                '§Aª¾¹D²Õ¹q¸£¤]Á¿­·¤ô¶Ü?',
-                '»ñ±ù¦b¤¤¥@¬ö¡A³Q¶Q±Úµø¬°¥i¥HÅã¥Ü¨­¥÷¦a¦ìªº¤ôªG¡A¬Æ¦Ü¦³¥X¯²»ñ±ùªA°È',
-                '³»¯Åªº²Ô¤h´U¤l¡A¬O¥Îªe»©¤òÀÖ°µªº¡A¬Æ¦Ü¦L¦a¦w¤H¬°¤Fªe»©¸ê·½¥´¬[¡A¾É­P¦U³¡¸¨¤H¤f¤j¶q¤U­°',
-                'Ä¬Áp¤H´¿¸g¥Î²B¼u·À¤õ¡B»\¤ôÅò¡A¸ò´f´fªº¤uÃÀ¤£¬Û¤W¤U',
-                '³Ü¥i¼Ö¡A¹ï¨xÅ¦ªº¶Ë®`»P³Ü°sµ¥»ù',
-                '¿}ªº¦¨Å}©Ê¡A¤ñ°s¤ñµÒ¤ñ¼Ğ·Ç¦¨Å}ª«ÁÙ­n±j',
-                'Às½¼¥H«e¬O¦b¬ü¬w¬O¥£Áõ½a¤H¤~·|¦Yªº­¹§÷',
-                'Æp¥Ûªº»ù®æ¡A´N¬O¦æ¾P±j¤j¤O¶qªº®i²{',
-                '¬ü°ê50¦~¥N¡A¦³1/3ªºÂå¥Í¨C¤Ñ¦Ü¤Ö©â¤@¥]µÒ',
-                '¦b§ÆÃ¾Á|¦æªº¶ø¹B¡A¬O­n»rÅé°ÑÁÉªº',
-                '? ???¬O©Ò¥HÃö§Ú§¾¨Æªº·N«ä¡A? (©Ò¥H)??(Ãö§Ú)?(§¾¨Æ)',
-                '§Ú²{¦b¹³¬O¸m¨­¦bª÷¬P¤@¼Ë¡A¤Ó¶§±q¦èÃä¤É°_¡A¦Ó¥B«×¤é¦p¦~'
-                '®yÀYÄH¦³¨Æ¨S¨Æ´N·|¥h¥Î¯İÅ_©ç¥´ªêÄH']
+    elif 'å†·çŸ¥è­˜' in msg :
+        s_List=['æˆ‘å€‘èº«é«”å…§ä¸€åŠçš„ è˜¿?è‰?    è¡€å°æ¿æ˜¯å¾è‚ºè£½é€ çš„',
+                'åŒ—æ¥µç†Šçš„æ¯›æ˜¯é€æ˜çš„ï¼Œæ¯›æ˜¯é»‘è‰²çš„',
+                'ç§‘æŠ€æµ·ç¶¿çš„åŸæ–™æ˜¯ä¸‰èšæ°°èƒºåšçš„å–”ï¼Œä¸éä¸è¦ç¢°åˆ°ç†±æ°´å°±æ²’äº‹äº†ã€‚',
+                'æ•¸æ“šæ˜¯è‡ªç„¶æ•¸æ“šï¼Œæ²’æœ‰äººç¶­ä¿®æ”¹çš„ï¼Œé›œäº‚ç„¡ç« çš„æ•¸æ“šï¼Œè­¬å¦‚åœ‹å®¶äººå£ã€YTå½±ç‰‡è§€çœ‹æ¬¡æ•¸ï¼Œæ•¸æ“šçš„é–‹é ­æ•¸å­—å‡ºç¾æ©Ÿç‡æœ€é«˜çš„æ•¸å­—æ˜¯1å–”',
+                'Taumatawhakatangihangakoauauotamateapokaiwhenuakitanatahué€™å€‹åœ°æ–¹åœ¨ç´è¥¿è˜­å–”',
+                'æ·¡æ°´é€™å€‹åœ°åçš„å®˜æ–¹ä½¿ç”¨éçš„ç¾…é¦¬æ‹¼éŸ³æœ‰ä¸‰ç¨®ï¼ŒDanshuiã€Tamsuiã€Tamshuiï¼Œæ²’æœ‰ä½¿ç”¨éDansui',
+                'floccinaucinihilipilificationæ˜¯è¼•è”‘çš„æ„æ€',
+                'ä¸–ç•Œæ­·å²ä¸Šæ›¾æ¶ˆå¤±éåå¤©ç‚º1752å¹´5/30~6/8',
+                'äººé¡å’Œé‡ç”Ÿè™é¯¨çš„äº’å‹•è‡´æ­»ç‡æ˜¯0',
+                'ç¾åœ¨ä¿„ç¾…æ–¯æ–¹å¡Šç§»å‹•æ–¹å¡Šçš„æœ€å¿«çš„æŠ€å·§æ˜¯rolling',
+                'æˆ‘æœ‰ä¸€å¼µå‚³èªªä¸­æ‹”æ‰æœƒè®“é›»è…¦æ€§èƒ½å€å¢çš„é¡¯å¡... GT 210',
+                'ä½ çŸ¥é“å—?GT710çš„æ€§èƒ½æ¯”GT720å¼·',
+                'ä½ çŸ¥é“çµ„é›»è…¦ä¹Ÿè¬›é¢¨æ°´å—?',
+                'é³³æ¢¨åœ¨ä¸­ä¸–ç´€ï¼Œè¢«è²´æ—è¦–ç‚ºå¯ä»¥é¡¯ç¤ºèº«ä»½åœ°ä½çš„æ°´æœï¼Œç”šè‡³æœ‰å‡ºç§Ÿé³³æ¢¨æœå‹™',
+                'é ‚ç´šçš„ç´³å£«å¸½å­ï¼Œæ˜¯ç”¨æ²³è²æ¯›æ°ˆåšçš„ï¼Œç”šè‡³å°åœ°å®‰äººç‚ºäº†æ²³è²è³‡æºæ‰“æ¶ï¼Œå°è‡´å„éƒ¨è½äººå£å¤§é‡ä¸‹é™',
+                'è˜‡è¯äººæ›¾ç¶“ç”¨æ°«å½ˆæ»…ç«ã€è“‹æ°´å£©ï¼Œè·Ÿæƒ æƒ çš„å·¥è—ä¸ç›¸ä¸Šä¸‹',
+                'å–å¯æ¨‚ï¼Œå°è‚è‡Ÿçš„å‚·å®³èˆ‡å–é…’ç­‰åƒ¹',
+                'ç³–çš„æˆç™®æ€§ï¼Œæ¯”é…’æ¯”è¸æ¯”æ¨™æº–æˆç™®ç‰©é‚„è¦å¼·',
+                'é¾è¦ä»¥å‰æ˜¯åœ¨ç¾æ´²æ˜¯å¥´éš¸çª®äººæ‰æœƒåƒçš„é£Ÿæ',
+                'é‘½çŸ³çš„åƒ¹æ ¼ï¼Œå°±æ˜¯è¡ŒéŠ·å¼·å¤§åŠ›é‡çš„å±•ç¾',
+                'ç¾åœ‹50å¹´ä»£ï¼Œæœ‰1/3çš„é†«ç”Ÿæ¯å¤©è‡³å°‘æŠ½ä¸€åŒ…è¸',
+                'åœ¨å¸Œè‡˜èˆ‰è¡Œçš„å¥§é‹ï¼Œæ˜¯è¦è£¸é«”åƒè³½çš„',
+                '? ???æ˜¯æ‰€ä»¥é—œæˆ‘å±äº‹çš„æ„æ€ï¼Œ? (æ‰€ä»¥)??(é—œæˆ‘)?(å±äº‹)',
+                'æˆ‘ç¾åœ¨åƒæ˜¯ç½®èº«åœ¨é‡‘æ˜Ÿä¸€æ¨£ï¼Œå¤ªé™½å¾è¥¿é‚Šå‡èµ·ï¼Œè€Œä¸”åº¦æ—¥å¦‚å¹´',
+                'å¯æ¨‚åŠ æ›¼é™€ç æœƒçˆ†ä¸¦ä¸æ˜¯å› ç‚ºèµ·åŒ–å­¸åæ‡‰ï¼Œæ˜¯ç•¶éé£½å’ŒäºŒæ°§åŒ–ç¢³çš„å‡çµæ ¸ï¼Œèˆ‡åŠ é¹½çš„æ•ˆæœä¸€æ¨£ï¼Œæ˜¯ç‰©ç†åæ‡‰',
+                'åº§é ­é¯¨æœ‰äº‹æ²’äº‹å°±æœƒå»ç”¨èƒ¸é°­æ‹æ‰“è™é¯¨']
         message = TextSendMessage(text=random.choice(s_List))
 
-    elif '¨Î¥y' in msg or '¦W¨¥' in msg :
-        s_List=['¦³ªº¸Ü¡A§Ú¥Î»ó¤Õªíºt¦Y¸q¤j§QÄÑ --³¯¥Ã®f',
-                '¤z¡A§A°¨¤l³á---³¯¥e´É',
-                '¦³¥æµLÃş¡A¦³¥æ¿ú´N¤£¤ÀÃş---³¯¥Ã®f',
-                '³¯¥Ã®f:\n¥u­n¦³®æ¤l³£¬O½Z¯È¡C\n2021/4/1',
-                '³¯¥Ã®f¡G\n±CÅÚ­Ì±Ğ....\n2021/4/15']
+    elif 'ä½³å¥' in msg or 'åè¨€' in msg :
+        s_List=['æœ‰çš„è©±ï¼Œæˆ‘ç”¨é¼»å­”è¡¨æ¼”åƒç¾©å¤§åˆ©éºµ --é™³æ°¸å®¸',
+                'å¹²ï¼Œä½ é¦¬å­å–”---é™³å æ£Ÿ',
+                'æœ‰äº¤ç„¡é¡ï¼Œæœ‰äº¤éŒ¢å°±ä¸åˆ†é¡---é™³æ°¸å®¸',
+                'é™³æ°¸å®¸:\nåªè¦æœ‰æ ¼å­éƒ½æ˜¯ç¨¿ç´™ã€‚\n2021/4/1',
+                'é™³æ°¸å®¸ï¼š\nå©†è˜¿å€‘æ•™....\n2021/4/15']
         message = TextSendMessage(text=random.choice(s_List))
          
     elif 'flag' in msg :
-        s_List=['¦³ªº¸Ü¡A§Ú¥Î»ó¤Õªíºt¦Y¸q¤j§QÄÑ --³¯¥Ã®f',
-                'Flag:\n31018³¯¦Ø±Æ¤@¦pªG¥_¼Ò58¡B59¡B60ªº¸Ü¡A´N­n½Ğ¥ş¯Z³Ü¬õ¯ù«Î']
+        s_List=['æœ‰çš„è©±ï¼Œæˆ‘ç”¨é¼»å­”è¡¨æ¼”åƒç¾©å¤§åˆ©éºµ --é™³æ°¸å®¸',
+                'Flag:\n31018é™³è‚‹æ’ä¸€å¦‚æœåŒ—æ¨¡58ã€59ã€60çš„è©±ï¼Œå°±è¦è«‹å…¨ç­å–ç´…èŒ¶å±‹']
         message = TextSendMessage(text=random.choice(s_List))
          
 
-    elif '¦nªo'in msg or '¦n­»'in msg or '¯u­»'in msg  or '»Q'in msg or 'peko'in msg :
-        s_List=['­n¤£­npeko¯ù',
-                '§Ú­n°tcola',
-                '¦nªo³ápeko']
+    elif 'å¥½æ²¹'in msg or 'å¥½é¦™'in msg or 'çœŸé¦™'in msg  or 'èˆ”'in msg or 'peko'in msg :
+        s_List=['è¦ä¸è¦pekoèŒ¶',
+                'æˆ‘è¦é…cola',
+                'å¥½æ²¹å–”peko']
         message = TextSendMessage(text=random.choice(s_List))
          
-    elif '±ğ¹Ï' in msg :
-        message = TextSendMessage(text='ÃTÃT¦n¥i·R')
+    elif 'æ¢—åœ–' in msg :
+        message = TextSendMessage(text='é¯Šé¯Šå¥½å¯æ„›')
          
-    elif '¥Õ¹â¥J' in msg :
-        message = TextSendMessage(text='¦n­»')
+    elif 'ç™½å«–ä»”' in msg :
+        message = TextSendMessage(text='å¥½é¦™')
          
-    elif '«å´k' in msg or 'Ãi' in msg or 'ºâ¤F' in msg :
-        s_List=['«å´k«å´k«å´k','§AÁÙ¯u¬O«å´k©O']
+    elif 'æ€ æƒ°' in msg or 'æ‡¶' in msg or 'ç®—äº†' in msg :
+        s_List=['æ€ æƒ°æ€ æƒ°æ€ æƒ°','ä½ é‚„çœŸæ˜¯æ€ æƒ°å‘¢']
         message = TextSendMessage(text=random.choice(s_List))
-    elif '¼BÄÉ·®' in msg:
-        s_List=['¥øÃZ³ßÅwªº','¥øÃZ³ßÅw¬İ','¥øÃZªº¤kªB¤Í','¥øÃZ³ßÅw¼BÄÉ·ì','¦oª¨»¡¤j¾Ç«e¤£¯à¥æ¨kªB¤Í¡A¦ı¦oª¨¸U¸U¨S·Q¨ì¡A¥L¤k¨àªº¤ß°ê¤p´N³Q¥øÃZ°½¨«¤F']
+    elif 'åŠ‰é¦¨æ¦†' in msg:
+        s_List=['ä¼éµå–œæ­¡çš„','ä¼éµå–œæ­¡çœ‹','ä¼éµçš„å¥³æœ‹å‹','ä¼éµå–œæ­¡åŠ‰é¦¨ç‘œ','å¥¹çˆ¸èªªå¤§å­¸å‰ä¸èƒ½äº¤ç”·æœ‹å‹ï¼Œä½†å¥¹çˆ¸è¬è¬æ²’æƒ³åˆ°ï¼Œä»–å¥³å…’çš„å¿ƒåœ‹å°å°±è¢«ä¼éµå·èµ°äº†']
         message = TextSendMessage(text=random.choice(s_List))
         
-    elif '¬y¬P«B' in msg :
-        s_List=['¥øÃZ³ßÅwªº','¥øÃZ³ßÅw¬İ','¥øÃZ³ßÅw¼BÄÉ·ì','¤@¦~¤¤³Ì­È±o¬İªº¤@³õ¬y¬P«B¬O¤K¤ë¥ª¥kªº­^¥P®y¬y¬P«B']
+    elif 'æµæ˜Ÿé›¨' in msg :
+        s_List=['ä¼éµå–œæ­¡çš„','ä¼éµå–œæ­¡çœ‹','ä¼éµå–œæ­¡åŠ‰é¦¨ç‘œ','ä¸€å¹´ä¸­æœ€å€¼å¾—çœ‹çš„ä¸€å ´æµæ˜Ÿé›¨æ˜¯å…«æœˆå·¦å³çš„è‹±ä»™åº§æµæ˜Ÿé›¨']
         message = TextSendMessage(text=random.choice(s_List))
          
-    elif '¾÷¾¹¤H¦Û§Ú¤¶²Ğ' in msg :
-        message = TextSendMessage(text='§Ú¬O«å´k¥q±Ğ¡A¨©¯S¾|¦N¯Q´µ¡PÃ¹°Ò¥§±d«Ò¡A¦Û±q¿ô¨Ó¥H«á¡A´N¦b¥øÃZ¤ı©³¤U¤u§@¤F')     
+    elif 'æ©Ÿå™¨äººè‡ªæˆ‘ä»‹ç´¹' in msg :
+        message = TextSendMessage(text='æˆ‘æ˜¯æ€ æƒ°å¸æ•™ï¼Œè²ç‰¹é­¯å‰çƒæ–¯Â·ç¾…æ›¼å°¼åº·å¸ï¼Œè‡ªå¾é†’ä¾†ä»¥å¾Œï¼Œå°±åœ¨ä¼éµç‹åº•ä¸‹å·¥ä½œäº†')     
 
-    elif 'ÃCÃÀº¡¤À' in msg :
-        message = TextSendMessage(text='ÃCÃÀº¡¤À')
+    elif 'é¡è—æ»¿åˆ†' in msg :
+        message = TextSendMessage(text='é¡è—æ»¿åˆ†')
 
-    elif 'FBI' in msg or 'ÅÚ²ú' in msg:
-       # line_bot_api.reply_message(event.reply_token, message='¹Ï¤ù¤ä´©')
+    elif 'FBI' in msg or 'è˜¿è‰' in msg:
+       # line_bot_api.reply_message(event.reply_token, message='åœ–ç‰‡æ”¯æ´')
         web_Rul = "https://i.imgur.com/Ej6FIVL.jpg"
         message = ImageSendMessage(original_content_url= web_Rul,
                                    preview_image_url = web_Rul )
-    elif '«D¬w' in msg :
+    elif 'éæ´²' in msg :
         web_Rul = "https://www.youtube.com/watch?v=D0dBptGRTvc"
         message = TextSendMessage(text=web_Rul)
             
