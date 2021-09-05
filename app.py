@@ -525,7 +525,7 @@ def handle_message(event):
         message = TextSendMessage(text=random.choice(s_List))
         
     elif '流星雨' in msg :
-        s_List=['企鵝喜歡的','企鵝喜歡看','企鵝喜歡劉馨瑜','一年中最值得看的一場流星雨是八月左右的英仙座流星雨']
+        s_List=['企鵝喜歡的','企鵝喜歡看','企鵝喜歡劉馨榆','一年中最值得看的一場流星雨是八月左右的英仙座流星雨']
         message = TextSendMessage(text=random.choice(s_List))
          
     elif '機器人自我介紹' in msg :
