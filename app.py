@@ -443,21 +443,21 @@ def handle_message(event):
     elif '晚安' in msg :
         
         s_List=['晚安呀',
-                '晚安哦(???)?',
-                '晚安ㄛ(*?ω?*)',
-                '晚安呀?^???^?',
-                '晚安呀(?????)?*。',
+                '晚安哦(•ө•)♡',
+                '晚安ㄛ(*´ω｀*)',
+                '晚安呀ฅ^•ﻌ•^ฅ',
+                '晚安呀(◍•ᴗ•◍)✧*。',
                 '晚安呦',
                 '晚安囉',
-                '晚安呀(?∩?? ? ??∩`)',
+                '晚安呀(´∩｡• ᵕ •｡∩`)',
                 '晚安',
-                '晚安V●?●V',
-                '晚安呀( ?▽? ) ',
-                '晚安ㄛ(*?ω?*)']
+                '晚安V●ᴥ●V',
+                '晚安呀( ╹▽╹ ) ',
+                '晚安ㄛ(*´ω｀*)']
         message = TextSendMessage(text=random.choice(s_List))
          
-    elif '??' in msg :
-        message = TextSendMessage(text='??是在69 --陳永宸')
+    elif '¿?' in msg :
+        message = TextSendMessage(text='¿?是在69 --陳永宸')
          
     elif '義大利麵' in msg :
         message = TextSendMessage(text='有的話，我用鼻孔表演吃義大利麵 --陳永宸')
