@@ -125,6 +125,10 @@ def handle_message(event):
             web_Rul = "https://i.imgur.com/fxzh9PQ.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
+        elif '工三小.jpg' in msg :
+            web_Rul = "https://i.imgur.com/8V2TY7V.gif"
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )
         elif '怕.jpg' in msg :
             jpg_List = ["https://i.imgur.com/fu7SJKF.jpg",
                         "https://i.imgur.com/v2IhPib.jpg",
@@ -132,6 +136,13 @@ def handle_message(event):
             web_Rul = random.choice(jpg_List)
             message = ImageSendMessage(original_content_url= web_Rul,
             preview_image_url = web_Rul )
+        elif '不可以色色.jpg' in msg :
+            jpg_List = ["https://i.imgur.com/cK6DxXw.jpg",
+                        "https://i.imgur.com/DA4deJi.jpg",
+                        "https://i.imgur.com/4EWwMOe.gif"]
+            web_Rul = random.choice(jpg_List)
+            message = ImageSendMessage(original_content_url= web_Rul,
+            preview_image_url = web_Rul )    
         elif '早安.jpg' in msg :
             web_Rul = "https://i.imgur.com/i9g2f8l.jpg"
             message = ImageSendMessage(original_content_url= web_Rul,
