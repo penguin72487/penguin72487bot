@@ -40,7 +40,7 @@ import QWERTYUIOP
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
 
-#https://github.com/penguin72487/penguin72487bot.git
+#https://git.heroku.com/penguin72487bot.git
 
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
