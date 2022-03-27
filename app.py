@@ -40,6 +40,8 @@ import QWERTYUIOP
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly']
 
+#https://github.com/penguin72487/penguin72487bot.git
+
 app = Flask(__name__)
 static_tmp_path = os.path.join(os.path.dirname(__file__), 'static', 'tmp')
 # Channel Access Token
@@ -509,13 +511,7 @@ def handle_message(event):
                 '有交無類，有交錢就不分類---陳永宸',
                 '陳永宸:\n只要有格子都是稿紙。\n2021/4/1',
                 '陳永宸：\n婆蘿們教....\n2021/4/15']
-        message = TextSendMessage(text=random.choice(s_List))
-         
-    elif 'flag' in msg :
-        s_List=['有的話，我用鼻孔表演吃義大利麵 --陳永宸',
-                'Flag:\n31018陳肋排一如果北模58、59、60的話，就要請全班喝紅茶屋']
-        message = TextSendMessage(text=random.choice(s_List))
-         
+        message = TextSendMessage(text=random.choice(s_List))         
 
     elif '好油'in msg or '好香'in msg or '真香'in msg  or '舔'in msg or 'peko'in msg :
         s_List=['要不要peko茶',
