@@ -354,7 +354,7 @@ def handle_message(event):
          
    # elif '探究' in msg :
    #     message = TextSendMessage(text='來探究企鵝遊戲阿，看誰可以整理好，最接近企鵝寫的規則')
-    elif '來首歌' in msg or '給我一首歌的時間' in msg or '音樂' in msg :
+    elif '來首歌' in msg or '給我一首歌的時間' in msg or '來點音樂' in msg :
         s_List=['https://www.youtube.com/watch?v=mHmB5mhkuP0',
                 'https://www.youtube.com/watch?v=1N5mD2qle7A',
                 'https://www.youtube.com/watch?v=AMmDgBXwq9A',
